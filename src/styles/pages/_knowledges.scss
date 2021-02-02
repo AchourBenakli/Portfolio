@@ -1,0 +1,271 @@
+.knowledges { 
+  .knowledgesContent {
+    min-height: $minHeight;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 35% 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas:
+      'E E E'
+      'P L H';
+
+    .programsLanguages,
+    .experience,
+    .hobbies {
+      background: $black;
+      border-radius: $borderRadius;
+      padding: 1.2rem;
+      font-size: 0.95rem;
+     
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-family: $font-2;
+      color: $grey;
+      text-transform: uppercase;
+    }
+
+    .programsLanguages {
+      margin-right: 0.5rem;
+      grid-area: E E;
+      margin-bottom: 0.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        'P'
+        'L';
+        height: 100%;
+
+      .programsDisplay {
+        grid-area: 'L';
+
+        h3 {
+          padding-bottom: 2.5rem;
+        }
+      }
+
+      .languagesDisplay {
+        grid-area: 'P';
+
+        h3{
+          padding-bottom: 2.5rem;
+        }
+      }
+
+      .years {
+        font-size: 0.65rem;
+        display: flex;
+        justify-content: space-between;
+        color: whitesmoke;
+
+        span {
+          width: 30%;
+
+          &:nth-child(2) {
+            text-align: rigth;
+            width: 33%;
+          }
+
+          &:nth-child(3) {
+            text-align: rigth;
+            width: 34%;
+          }
+          &:nth-child(4) {
+            text-align: rigth;
+            width: 34%;
+          }
+
+          &:nth-child(2):before,
+          &:nth-child(3):before,
+          &:nth-child(4):before {
+            content: '';
+            background: rgba(190, 179, 179, 0.9);
+            position: absolute;
+            height: 146px;
+            width: 1px;
+            transform: translate(9px, 19px);
+          }
+        }
+      }
+
+      .programsList {
+        padding-top: 0.5rem;
+
+        li {
+          color: $grey;
+        }
+
+        .progressBar {
+          height: 0.4rem;
+          background: transparent;
+          border-radius: 50px;
+          margin-top: 0.2rem;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            background: $white;
+            border-radius: 50px;
+            height: 0.4rem;
+            width: 0;
+            animation: line 2s ease-out forwards;
+
+            @keyframes line {
+              to {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .languagesList {
+        padding-top: 0.5rem;
+
+        li {
+          color: $grey;
+        }
+
+        .progressBar {
+          height: 0.4rem;
+          background: transparent;
+          border-radius: 50px;
+          margin-top: 0.2rem;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            background: $white;
+            border-radius: 50px;
+            height: 0.4rem;
+            width: 0;
+            animation: line 2s ease-out forwards;
+
+            @keyframes line {
+              to {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .hobbies {
+      grid-area: P L H;
+      margin: 0 0 0.5rem 0.5rem;
+      display: grid;
+      height: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      // grid-template-rows: 10% 1fr 1fr;
+
+      h3 {
+        padding: 0;
+        margin: 0;
+        height: 80%;
+      }
+      h4 {
+        font-size: 1.1rem;
+        color: $grey;
+      }
+      h5 {
+        color: $white;
+        padding: 0.5rem 0 0.5rem 1rem;
+      }
+      li {
+        padding-top: 0;
+        margin-top: 0;
+      }
+      .hobby {
+        margin-top: 0rem;
+        padding: 0;
+      }
+    }
+    p {
+      text-align: justify;
+      padding: 0 -1rem;
+    }
+    span {
+      padding-left: 0.5rem;
+    }
+  }
+  .experience {
+    grid-area: L H;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+
+    h3 {
+      height: 60px;
+    }
+
+    ul {
+      height: 80%;
+      display: grid;
+
+      li {
+        i {
+          position: absolute;
+          color: $white;
+        }
+        span {
+          position: absolute;
+          transform: translateX(2.2rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .knowledgesContent {
+    h3 {
+      font-size: 1.2rem !important;
+    }
+    .languagesList {
+      padding-top: 0.2rem !important;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    .otherSkills,
+    .hobbies {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .knowledgesContent {
+    h4 {
+      font-size: 0.9rem !important;
+    }
+    h5 {
+      font-size: 0.6rem !important;
+      padding: 0.2rem 1rem !important;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .knowledgesContent {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr 180px 180px !important;
+
+    .languages {
+      grid-area: 1 !important;
+    }
+  }
+  .experience {
+    grid-area: 2 !important;
+    margin-top: 0.5rem !important;
+  }
+  .hobbies {
+    grid-area: 5 !important;
+    margin-left: 0 !important;
+  }
+}
+//

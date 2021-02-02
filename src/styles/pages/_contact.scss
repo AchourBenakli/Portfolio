@@ -1,0 +1,91 @@
+.contact{
+
+  .contactContent{
+    background:  $grey;
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 500px;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+  }
+
+  .header{
+display: flex;
+text-align: center;
+justify-content: center;
+padding: 5rem;
+color: $black;
+font-size: larger;
+  }
+
+  .contactBox{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-left: 180px;
+      max-width: 580px;
+      padding:0 ;
+      color: $black;
+      input, textarea{
+        width: 100%;
+        border:  none;
+        border-radius: $borderRadius;
+        outline: none;
+        border-bottom: 1px solid $black;
+        color: $grey;
+        padding: 14px; 
+        &::placeholder{
+          color: $black;
+          font-size: 18px;    
+  }
+}
+.inputSubmit{
+ cursor: pointer; 
+ margin-top: 30px;
+}
+  }
+}
+
+@media screen and (max-width: 1280px){
+  .contactBox {
+    justify-content: center;
+    margin-left: 2rem !important;
+  }
+  form{
+    justify-content: center;
+    
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .contactBox {
+    justify-content: center;
+    margin-left: 2rem !important;
+  }
+  form{
+    margin-left: 12rem;
+    width: 500px;
+  }
+}
+@media screen and (max-width:580px){
+  .contactBox {
+  justify-content: center;
+  margin-left: 2rem;
+  }
+  form{
+    margin-left: -4rem;
+    width: 500px;
+  }
+}
