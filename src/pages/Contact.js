@@ -13,6 +13,7 @@ class NameForm extends React.Component {
     NameFilled: '',
     NumberFilled: '',
     mailFilled: '',
+    MessageFilled: ''
   }
 
 
@@ -23,7 +24,7 @@ class NameForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    alert('Hello ' + this.state.NameFilled + ' ' + 'we have registred the following number : ' + this.state.NumberFilled + ' ' + 'and your email ' + this.state.mailFilled);
+    alert('Hello ' + this.state.NameFilled + ' ' + 'we have registred the following number : ' + this.state.NumberFilled + ' ' + 'and your email ' + this.state.mailFilled + ' ' + 'and here is your message :\n ' + this.state.MessageFilled);
     // <Popup />
   }
 
@@ -61,7 +62,8 @@ class NameForm extends React.Component {
 
               <label>
                 Message :
-                <textarea value={this.state.value} onChange={this.handleChange} />
+                <textarea value={this.state.MessageFilled}
+                  onChange={(event) => this.setState({ MessageFilled: event.target.value })} />
                 <input type="submit" className='inputSubmit' onClick={this.handleSubmit} />
               </label>
             </form>

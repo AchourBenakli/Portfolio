@@ -9,7 +9,6 @@ const NotFound = () => {
         <h5>Please comeback to my Home Page</h5><br/><br/><br/>
         <NavLink exact to="/">
           <i className="fas fa-home">
-          
             <span>Home Page</span>
           </i>
         </NavLink>
