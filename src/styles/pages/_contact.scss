@@ -57,35 +57,33 @@ font-size: larger;
   }
 }
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1605px){
   .contactBox {
     justify-content: center;
-    margin-left: 2rem !important;
   }
   form{
     justify-content: center;
-    
     width: 500px;
   }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1024px){
   .contactBox {
     justify-content: center;
     margin-left: 2rem !important;
   }
   form{
-    margin-left: 12rem;
+    // margin-left: 12rem;
     width: 500px;
   }
 }
-@media screen and (max-width:580px){
+@media screen and (max-width:767px){
   .contactBox {
   justify-content: center;
   margin-left: 2rem;
   }
   form{
-    margin-left: -4rem;
-    width: 500px;
+    
+    width: 300px;
   }
 }

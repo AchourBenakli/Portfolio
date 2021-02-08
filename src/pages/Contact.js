@@ -1,8 +1,6 @@
 import React from 'react';
 import NavigationNew from '../components/NavigationNew';
 
-
-
 class NameForm extends React.Component {
   constructor(props) {
     super(props);

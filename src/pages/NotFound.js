@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+
 const NotFound = () => {
   return (
     <div className="notFound">
@@ -16,5 +17,6 @@ const NotFound = () => {
     </div>
   );
 };
+
 
 export default NotFound;
