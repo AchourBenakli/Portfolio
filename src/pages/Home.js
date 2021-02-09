@@ -10,7 +10,7 @@ const Home = () => {
           <h1>Welcome</h1>
           <h2>I'm a Front Desk Agent</h2>
           <a href="./CV.pdf" target="_blank">Download CV</a>
-          <button><link to={"/Calendar"}>Book me</link></button>
+          {/* <button><link to={"/Calendar"}>Book me</link></button> //Trouver le moyen de Link */}
         </div>
       </div>
     </div>
