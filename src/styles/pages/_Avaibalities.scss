@@ -1,8 +1,72 @@
-.Calendar{
+.CalendarMain{
   *{
     box-sizing: border-box;
     margin: 0;
     padding:0;
     color: $font-2;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+
+  .react-calendar, h2{
+    border-radius: $borderRadius;
+    margin-top: 5rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5rem;  
+    background-color : grey;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px){
+  .CalendarMain{
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding:0;
+      color: $font-2;
+      width: 850px;
+      background-color: $font-2;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  .react-calendar, h2{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5rem;
+  }
+}
+}
+
+@media screen and (max-width:767px){
+  .CalendarMain{
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding:0;
+      color: $font-2;
+      width: 600px;
+      background-color: $font-2;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  .react-calendar, h2{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  
+  }
+}
 }
