@@ -22,7 +22,7 @@ const NavigationNew = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/Knowledges" activeClassName="navActive">
+            <NavLink exact to="/Knowledges" activeClassName="navActive" >
               <i className="fas fa-mountain"></i>
               <span>Experience</span>
             </NavLink>

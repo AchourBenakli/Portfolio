@@ -1,38 +1,32 @@
-.CalendarMain{
-  *{
+.container{
     box-sizing: border-box;
     margin: 0;
-    padding:0;
-    color: black;
-    width: 500px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-  }
-
-  .react-calendar, h2{
+    padding: 0;
+.CalendarMain {
+  * {
     border-radius: $borderRadius;
-    margin-top: -270px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 5rem;  
     color: black;
-    background-color : rgb(61, 60, 60);
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:  rgba(82, 82, 82, 0.10);
+    min-height: 75px;
+    position: relative;
+    overflow: hidden;
   }
 }
+h2{
+    text-align: center;
+    padding-bottom: 20px;
+  }
 
 
-
-@media screen and (max-width: 1024px){
-  .CalendarMain{
-    *{
+@media screen and (max-width: 1024px) {
+  .CalendarMain {
+    * {
       box-sizing: border-box;
       margin: 0;
-      padding:0;
+      padding: 0;
       color: $font-2;
       width: 850px;
       background-color: $font-2;
@@ -40,22 +34,23 @@
       justify-content: center;
       text-align: center;
     }
-  .react-calendar, h2{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 5rem;
+    .react-calendar,
+    h2 {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 5rem;
+    }
   }
 }
-}
 
-@media screen and (max-width:767px){
-  .CalendarMain{
-    *{
+@media screen and (max-width: 767px) {
+  .CalendarMain {
+    * {
       box-sizing: border-box;
       margin: 0;
-      padding:0;
+      padding: 0;
       color: $font-2;
       width: 600px;
       background-color: $font-2;
@@ -63,13 +58,13 @@
       justify-content: center;
       text-align: center;
     }
-  .react-calendar, h2{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-  
+    .react-calendar,
+    h2 {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 }
 }

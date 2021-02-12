@@ -4,7 +4,6 @@ import NavigationNew from '../components/NavigationNew';
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleChange = this.handleChange.bind(this);//CHANGER LE CONTEXTE DE THIS
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   state = {
@@ -15,15 +14,9 @@ class NameForm extends React.Component {
   }
 
 
-  // handleChange(event) {
-  //   this.setState({ value: event.target.value });
-  //   console.log('votre nom est ');
-  // }
-
   handleSubmit(event) {
     event.preventDefault();
     alert('Hello ' + this.state.NameFilled + ' ' + 'we have registred the following number : ' + this.state.NumberFilled + ' ' + 'and your email ' + this.state.mailFilled + ' ' + 'and here is your message :\n ' + this.state.MessageFilled);
-    // <Popup />
   }
 
 
