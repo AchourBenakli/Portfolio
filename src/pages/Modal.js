@@ -1,21 +1,26 @@
 import React from 'react';
+import Avaibalities from './Avaibalities';
+
+
+
 
 
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      displayAvailabilities: false,
+    }
   }
 
-  handleClick(event) {
-    event.preventDefault();
-    // <Avaibalities />
-    alert('Shitttt')
-  }
   render() {
     return (
       <div>
-        <button onClick={this.handleClick.bind(this)}>Book me</button>
+        {this.state.displayAvailabilities && <Avaibalities />}
+        <button
+          onClick={() => this.setState({ displayAvailabilities: true })}>
+          Book me
+        </button>
       </div>
     );
   }

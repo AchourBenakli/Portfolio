@@ -6,7 +6,7 @@ class Avaibalities extends React.Component {
     return (
       <>
         <div className="CalendarMain">
-          <h2>My Avaibalities Please </h2>
+          <h2>My Avaibalities</h2>
           <Calendar />
         </div>
       </>
