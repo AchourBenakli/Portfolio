@@ -38,19 +38,13 @@ const NavigationNew = () => {
       <div className="socialNetwork">
         <ul>
           <li>
-            <a
-              href="https://fr.linkedin.com/in/achour-benakli-280231100"
-              target="_blank"
-              rel="noopener noreferer"
-            >
+            <a href="https://fr.linkedin.com/in/achour-benakli-280231100" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
             </a>
           </li>
           <li>
-            <a
-              href="https://github.com/AchourBenakli"
-              target="_blank"
-              rel="noopener noreferer"
+            <a href="https://github.com/AchourBenakli"
+              target="_blank" rel="noopener noreferrer"
             >
               <i className="fab fa-github"></i>
             </a>

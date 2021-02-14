@@ -16,7 +16,7 @@ class NameForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    alert('Hello ' + this.state.NameFilled + ' ' + 'we have registred the following number : ' + this.state.NumberFilled + ' ' + 'and your email ' + this.state.mailFilled + ' ' + 'and here is your message :\n ' + this.state.MessageFilled);
+    alert('Hello ' + this.state.NameFilled + ' we have registred the following number : ' + this.state.NumberFilled + ' and your email ' + this.state.mailFilled + ' and here is your message :\n\n\n' + this.state.MessageFilled);
   }
 
 
