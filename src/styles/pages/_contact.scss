@@ -1,14 +1,11 @@
-.contact{
-
-  .contactContent{
-    background:  $grey;
+.contact {
+  .contactContent {
+    background: $grey;
     min-height: $minHeight;
     width: 100%;
-    min-height: 500px;
     border-radius: $borderRadius;
     position: relative;
     overflow: hidden;
-
     &:after {
       content: '';
       position: absolute;
@@ -19,73 +16,63 @@
     }
   }
 
-  .header{
-display: flex;
-text-align: center;
-justify-content: center;
-padding: 5rem;
-color: $black;
-font-size: larger;
-  }
-
-  .contactBox{
+  .header {
     display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-left: 180px;
-      max-width: 580px;
-      padding:0 ;
-      color: $black;
-      margin-top: -1rem;
-      input, textarea{
-        width: 100%;
-        border:  none;
-        border-radius: $borderRadius;
-        outline: none;
-        border-bottom: 1px solid $black;
-        color: $grey;
-        padding: 14px; 
-        &::placeholder{
-          color: $black;
-          font-size: 18px;    
-  }
-}
-.inputSubmit{
- cursor: pointer; 
- margin-top: 30px;
-}
-  }
-}
+    text-align: center;
+    justify-content: center;
 
-@media screen and (max-width: 1605px){
+    padding: 5rem;
+    color: $black;
+    font-size: larger;
+  }
   .contactBox {
-    justify-content: center;
+    display: flex;
+    width: 90%;
+    color: $black;
+    margin-top: -1rem;  
+margin-left: 4.5rem;
+  }  
+    input,
+    textarea {
+      width: 95%;
+      
+      border: none;
+      border-radius: $borderRadius;
+      outline: none;
+      border-bottom: 1px solid $black;
+      color: $grey;
+      padding: 14px;
+      &::placeholder {
+        color: $black;
+        font-size: 18px;
+      }
+    }
+    .inputSubmit {
+      cursor: pointer;
+      margin-top: 30px;
+    }
   }
-  form{
-    justify-content: center;
-    width: 500px;
+  input {
+    margin-bottom: 20px;
   }
-}
 
-@media screen and (max-width: 1024px){
-  .contactBox {
+  label .textArea {
+    background-color: red;
+    margin-left: 10rem;
+  }
+  h2 {
+    position: relative;
     justify-content: center;
-    margin-left: 2rem !important;
+    text-align: center;
+    align-items: center;
   }
-  form{
-    // margin-left: 12rem;
-    width: 500px;
+
+  @media screen and (max-width:580px){
+    .contactBox, form {
+      display: grid;
+      margin-left: 1rem;
+  
+    }
   }
-}
-@media screen and (max-width:767px){
-  .contactBox {
-  justify-content: center;
-  margin-left: 2rem;
-  margin-top: -0.5rem;
-  }
-  form{ 
-    margin-top: -4rem;
-    width: 300px;
-  }
-}
+
+

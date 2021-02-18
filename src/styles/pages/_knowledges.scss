@@ -27,6 +27,7 @@
       font-family: $font-2;
       color: $grey;
       text-transform: uppercase;
+      margin-top: 1rem;
     }
 
     .programsLanguages {
@@ -162,12 +163,14 @@
       display: grid;
       height: 100%;
       grid-template-columns: repeat(1, 1fr);
-      // grid-template-rows: 10% 1fr 1fr;
+      grid-template-rows: 15%;
+    
 
       h3 {
         padding: 0;
         margin: 0;
         height: 80%;
+        padding-top: 1rem;
       }
       h4 {
         font-size: 1.1rem;
@@ -198,7 +201,10 @@
     grid-area: L H;
     padding-left: 1.5rem;
     padding-bottom: 1rem;
-
+height: 100%;
+    .exp-2, .exp-3{
+      margin-top: 1rem;
+    }
     h3 {
       height: 60px;
     }
@@ -221,51 +227,27 @@
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 700px) {
   .knowledgesContent {
-    h3 {
-      font-size: 1.2rem !important;
+  display: block;
+
+   .programsLanguages, .programsDisplay, .languagesDisplay{
+      font-size: smaller;
     }
-    .languagesList {
-      padding-top: 0.2rem !important;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-    .otherSkills,
-    .hobbies {
-      font-size: 0.8rem;
-    }
-  }
-}
-@media screen and (max-width: 850px) {
-  .knowledgesContent {
-    h4 {
-      font-size: 0.9rem !important;
-    }
-    h5 {
-      font-size: 0.6rem !important;
-      padding: 0.2rem 1rem !important;
+    .progressBar, span{
+      display: none;
     }
   }
 }
 @media screen and (max-width: 500px) {
   .knowledgesContent {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: 1fr 1fr 180px 180px !important;
+    display: inline-block;
 
-    .languages {
-      grid-area: 1 !important;
+   .programsLanguages, .programsDisplay, .languagesDisplay{
+      font-size: smaller;
+    }
+    .progressBar, span{
+      display: none;
     }
   }
-  .experience {
-    grid-area: 2 !important;
-    margin-top: 0.5rem !important;
-  }
-  .hobbies {
-    grid-area: 5 !important;
-    margin-left: 0 !important;
-  }
 }
-//

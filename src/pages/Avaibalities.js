@@ -17,6 +17,7 @@ class Avaibalities extends React.Component {
       showDate: true
     })
   }
+
   // reset = () => {
   //   this.setState({
   //     showDate: false
@@ -27,7 +28,7 @@ class Avaibalities extends React.Component {
       <div>
         <div className="home">
           <NavigationNew />
-          <div className="homeContent">
+          <div className="calendarContent">
             <div>
               <br /><br />
               <h2>My Avaibalities</h2>
@@ -37,6 +38,7 @@ class Avaibalities extends React.Component {
                 onChange={this.onChange}
                 value={this.state.date}
                 selectRange={true}
+                locale="en-GB"
               />
               <br />
               <button className={'button'} onClick={this.validation}>Validate</button>
