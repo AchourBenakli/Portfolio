@@ -6,23 +6,18 @@ import NavigationNew from '../components/NavigationNew';
 class Avaibalities extends React.Component {
   state = {
     date: new Date(),
-    showDate: false
+    showDate: false,
   }
   onChange = date => {
     this.setState({ date })
   }
+
 
   validation = () => {
     this.setState({
       showDate: true
     })
   }
-
-  // reset = () => {
-  //   this.setState({
-  //     showDate: false
-  //   })
-  // }
   render() {
     return (
       <div>
@@ -32,8 +27,8 @@ class Avaibalities extends React.Component {
             <div>
               <br /><br />
               <h2>My Avaibalities</h2>
+              <h3>Please choose your start date and end date</h3>
               <br />
-              {/* <div onClick={this.reset}> */}
               <Calendar className={'CalendarMain'}
                 onChange={this.onChange}
                 value={this.state.date}
@@ -44,11 +39,10 @@ class Avaibalities extends React.Component {
               <button className={'button'} onClick={this.validation}>Validate</button>
               {this.state.showDate ? (
                 <div>
-                  <p>From : {this.state.date[0].toLocaleDateString()} to: {this.state.date[1].toLocaleDateString()}</p>
+                  <p>From : {this.state.date[0].toLocaleDateString()} to : {this.state.date[1].toLocaleDateString()}</p>
                   <br />
                 </div>
               ) : null}
-              {/* </div> */}
               <div className={'backHome'}>
                 <br />
                 <li>

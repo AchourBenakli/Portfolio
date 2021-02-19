@@ -29,7 +29,11 @@
      text-transform: capitalize;
      margin-top: 5.5rem;
    
-   
+     .react-calendar__tile:hover{
+       color: $white;
+       background:$black;
+      
+     }
   
      button{
       border-radius: $borderRadius;
