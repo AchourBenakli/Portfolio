@@ -5,25 +5,26 @@ class NameForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
   state = {
-    NameFilled: '',
-    NumberFilled: '',
+    nameFilled: '',
+    numberFilled: '',
     mailFilled: '',
-    MessageFilled: ''
+    messageFilled: ''
   }
 
 
   handleSubmit(event) {
     event.preventDefault();
-    alert('Hello ' + this.state.NameFilled + ' we have registred the following number : ' + this.state.NumberFilled + ' and your email ' + this.state.mailFilled + ' and here is your message :\n\n\n' + this.state.MessageFilled);
+    alert('Hello ' + this.state.nameFilled + ' we have registred the following number : ' + this.state.numberFilled + ' and your email ' + this.state.mailFilled + ' and here is your message :\n\n\n' + this.state.messageFilled);
   }
 
-  onChange(e) {
+  onChange(event) {
     const re = /^[0-9\b]+$/;
     // if value is not blank, then test the regex
-    if (e.target.value === '' || re.test(e.target.value)) {
-      this.setState({ value: e.target.value })
+    if (event.target.value === '' || re.test(event.target.value)) {
+      this.setState({ numberFilled: event.target.value })
     } else {
       alert('Please enter a valid form')
     }
@@ -43,14 +44,14 @@ class NameForm extends React.Component {
               <label>
                 Name :
           <input type="text"
-                  value={this.state.NameFilled}
-                  onChange={(event) => this.setState({ NameFilled: event.target.value })} />
+                  value={this.state.nameFilled}
+                  onChange={(event) => this.setState({ nameFilled: event.target.value })} />
               </label>
 
               <label>
                 Number :
           <input type="text"
-                  value={this.state.NumberFilled}
+                  value={this.state.numberFilled}
                   onChange={this.onChange}
                 />
               </label>
@@ -65,8 +66,8 @@ class NameForm extends React.Component {
 
               <label className={'textArea'}  >
                 Message :
-                <textarea value={this.state.MessageFilled}
-                  onChange={(event) => this.setState({ MessageFilled: event.target.value })} />
+                <textarea value={this.state.messageFilled}
+                  onChange={(event) => this.setState({ messageFilled: event.target.value })} />
                 <input type="submit" className='inputSubmit' onClick={this.handleSubmit} value='Submit' />
               </label>
             </form>
