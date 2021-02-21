@@ -31,7 +31,7 @@ class Avaibalities extends React.Component {
             <div>
               <br /><br />
               <h2>My Avaibalities</h2>
-              <h3>Please choose your start date and end date</h3>
+              <h3>Please choose your dates </h3>
               <br />
               <Calendar className={'CalendarMain'}
                 onChange={this.onChange}

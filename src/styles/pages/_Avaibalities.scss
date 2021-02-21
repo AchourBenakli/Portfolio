@@ -1,14 +1,13 @@
-.home{
-
-  .calendarContent{
-    background:  $grey;
+.home {
+  .calendarContent {
+    background: $grey;
     min-height: $minHeight;
     width: 100%;
     border-radius: $borderRadius;
     position: relative;
     overflow: hidden;
     margin-left: 5px;
-  
+
     &:after {
       content: '';
       position: absolute;
@@ -17,44 +16,52 @@
       z-index: -1;
       filter: brightness(30%);
     }
-  
-  .CalendarMain {
-     border-radius: $borderRadius;
-     width: 98%;
-     padding-left: 2%;
-     color: rgb(245, 245, 245);
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-     text-transform: capitalize;
-     margin-top: 5.5rem;
-   
-     .react-calendar__tile:hover{
-       color: $white;
-       background:$black;
-      
-     }
-  
-     button{
+
+    .CalendarMain {
       border-radius: $borderRadius;
-      color: $grey;
-      width: 200px ;
-      font-size: 1.5rem;
-      font-family: $font-1; 
-     }
-     
-  }
-  h2{
+      width: 98%;
+      padding-left: 2%;
+      color: rgb(245, 245, 245);
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      margin-top: 5.5rem;
+
+      .react-calendar__tile:hover {
+        color: $white;
+        background: $black;
+
+      }
+
+      button {
+        border-radius: $borderRadius;
+        color: $grey;
+        width: 200px;
+        font-size: 1.5rem;
+        font-family: $font-1;
+      }
+
+    }
+
+    h2 {
       text-align: center;
       padding-bottom: 20px;
       color: $black;
     }
-    p{
+
+    h3 {
+      margin-left: 1.3rem;
+    }
+
+
+    p {
       color: $black;
       margin-top: 1rem;
       margin-left: 1.3rem;
     }
-    .button{
+
+    .button {
       border-radius: $borderRadius;
       color: $grey;
       width: 20rem;
@@ -62,21 +69,22 @@
       font-family: $font-1;
       font-size: larger;
       margin-left: 1rem;
-    }.buttonReset{
+    }
+
+    .buttonReset {
       border-radius: $borderRadius;
       color: $grey;
       width: 20rem;
       height: 2rem;
       font-family: $font-1;
       font-size: larger;
-      margin-left: 1rem; 
-     }
-  .backHome{
-    margin-left: 1.2rem; 
+      margin-left: 1rem;
+    }
+
+    .backHome {
+      margin-left: 1.2rem;
+    }
+
   }
-    
-  }
-  
-  }
-  
-  
+
+}
