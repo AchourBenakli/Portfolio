@@ -8,16 +8,20 @@ class Avaibalities extends React.Component {
     date: new Date(),
     showDate: false,
   }
-  onChange = date => {
+  onChange = (date) => {
     this.setState({ date })
   }
-
-
   validation = () => {
     this.setState({
       showDate: true
     })
   }
+  reset = () => {
+    this.setState({
+      showDate: false
+    })
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +41,7 @@ class Avaibalities extends React.Component {
               />
               <br />
               <button className={'button'} onClick={this.validation}>Validate</button>
+              <button className={'buttonReset'} onClick={this.reset}>Reset</button>
               {this.state.showDate ? (
                 <div>
                   <p>From : {this.state.date[0].toLocaleDateString()} to : {this.state.date[1].toLocaleDateString()}</p>
