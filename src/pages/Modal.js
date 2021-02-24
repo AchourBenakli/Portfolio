@@ -1,33 +1,20 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Avaibalities from './Avaibalities';
+
 
 class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      displayAvailabilities: false,
-    }
-  }
-
+  handleClick = () => {
+    this.props.toggle();
+  };
   render() {
     return (
-      <div>
-        {this.state.displayAvailabilities && <Avaibalities />}
-        <NavLink exact to="/Avaibalities" activeClassName="navActive">
-          <button
-            onClick={() => this.setState({ displayAvailabilities: true })}>
-            Book me
-        </button>
-        </NavLink>
+      <div className="modal">
+        <div className="modal_content">
+          <span className="close" onClick={this.handleClick}>&times;</span>
+          <p>Thanks for your booking</p>
+        </div>
       </div>
     );
   }
-
 }
-
-
-
-
 
 export default Modal;

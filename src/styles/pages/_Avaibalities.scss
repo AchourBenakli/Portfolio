@@ -26,12 +26,11 @@
       justify-content: center;
       align-items: center;
       text-transform: capitalize;
-      margin-top: 5.5rem;
+      margin-top: 3.9rem;
 
       .react-calendar__tile:hover {
         color: $white;
         background: $black;
-
       }
 
       button {
@@ -83,6 +82,7 @@
 
     .backHome {
       margin-left: 1.2rem;
+      margin-top: -1rem;
     }
 
   }

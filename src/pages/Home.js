@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationNew from '../components/NavigationNew';
-import Modal from './Modal';
+import Bookme from './Bookme';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
           <h1>Welcome</h1>
           <h2>I'm a Front Desk Agent.</h2>
           <a href="./CV.pdf" target="_blank">Download CV</a>
-          <Modal />
+          <Bookme />
         </div>
       </div>
     </div>
