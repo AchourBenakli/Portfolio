@@ -7,9 +7,10 @@ import Modal from '../pages/Modal';
 class Avaibalities extends React.Component {
   constructor(props) {
     super(props)
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
-      date: new Date(),
-      showDate: false,
+      // date: new Date(),
+      // showDate: false,
       showModal: false,
     };
   }
@@ -21,18 +22,24 @@ class Avaibalities extends React.Component {
   //     showDate: true,
   //   });
   // };
-
   togglePop = () => {
-    this.setState(oldstate => {
-      return { showModal: !oldstate.showModal }
+    this.setState(prevState => ({
+      showModal: !prevState.showModal
+    }));
+  };
+
+  // reset = () => {
+  //   this.setState({
+  //     showDate: false,
+  //   });
+  // };
+
+  handleSubmit() {
+    this.setState({
+      showModal: true
     })
   }
 
-  reset = () => {
-    this.setState({
-      showDate: false,
-    });
-  };
 
   render() {
     return (
@@ -48,7 +55,7 @@ class Avaibalities extends React.Component {
               <h2>My Avaibalities</h2>
               <h3>Please choose your dates </h3>
               <br />
-              {!this.state.showModal && <Modal toggle={this.togglePop} />}
+
 
               {/* Calendar */}
               <Calendar
@@ -61,17 +68,19 @@ class Avaibalities extends React.Component {
               {/* Button */}
               <br />
               {/* <button className={'button'} onClick={this.validation}>Validate</button> */}
-              <>
-                <div>
-                  <div>
-                    <button className={'button'} >Validate</button>
-                  </div>
-                  <button className={'buttonReset'} onClick={this.reset}>Reset</button>
-                </div>
-              </>
-              {/* Show date */}
 
-              {/* </div>
+              <div>
+                <div>
+                  <button className={'button'} onClick={this.togglePop}>Validate</button>
+                </div>
+              </div>
+              {this.state.showModal && <Modal toggle={this.togglePop} />}
+            </div>
+          </div>
+
+          {/* Show date */}
+
+          {/* </div>
               {this.state.showDate ? (
                 <div>
                   <p>
@@ -84,18 +93,16 @@ class Avaibalities extends React.Component {
             </div> */}
 
 
-              {/* BackHome */}
+          {/* BackHome */}
 
-              <div className={'backHome'}>
-                <br />
-                <li>
-                  <NavLink exact to="/" activeClassName="navActive">
-                    <i className="fas fa-home"></i>
-                    <span>Back Home</span>
-                  </NavLink>
-                </li>
-              </div>
-            </div>
+          <div className={'backHome'}>
+            <br />
+            <li>
+              <NavLink exact to="/" activeClassName="navActive">
+                <i className="fas fa-home"></i>
+                <span>Back Home</span>
+              </NavLink>
+            </li>
           </div>
         </div>
       </div>

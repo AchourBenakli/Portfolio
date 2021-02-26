@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Modal extends React.Component {
   handleClick = () => {
     this.props.toggle();
@@ -16,5 +15,6 @@ class Modal extends React.Component {
     );
   }
 }
+
 
 export default Modal;
