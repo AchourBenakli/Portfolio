@@ -9,30 +9,30 @@ class Avaibalities extends React.Component {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
-      date: new Date(),
-      showDate: false,
+      // date: new Date(),
+      // showDate: false,
       showModal: false,
     };
   }
-  onChange = (date) => {
-    this.setState({ date });
-  };
-  validation = () => {
-    this.setState({
-      showDate: true,
-    });
-  };
+  // onChange = (date) => {
+  //   this.setState({ date });
+  // };
+  // validation = () => {
+  //   this.setState({
+  //     showDate: true,
+  //   });
+  // };
   togglePop = () => {
     this.setState(prevState => ({
       showModal: !prevState.showModal
     }));
   };
 
-  reset = () => {
-    this.setState({
-      showDate: false,
-    });
-  };
+  // reset = () => {
+  //   this.setState({
+  //     showDate: false,
+  //   });
+  // };
 
   handleSubmit() {
     this.setState({
@@ -67,29 +67,18 @@ class Avaibalities extends React.Component {
               />
               {/* Button */}
               <br />
+              {/* <button className={'button'} onClick={this.validation}>Validate</button> */}
+
               <div>
                 <div>
-                  <button className={'button'} onClick={this.validation}>Validate</button>
-                  <button className={'button'} onClick={this.reset}>Reset</button>
+                  <button className={'button'} onClick={this.togglePop}>Validate</button>
                 </div>
-                {/* Show date */}
               </div>
-              {this.state.showDate ? (
-                <div>
-                  <p>
-                    From : {this.state.date[0].toLocaleDateString()} to :{' '}
-                    {this.state.date[1].toLocaleDateString()}
-                  </p>
-                  <br />
-                </div>
-              ) : null}
+              {this.state.showModal && <Modal toggle={this.togglePop} />}
             </div>
-
-            {this.state.showModal && <Modal toggle={this.togglePop} />}
-            <br />
-            <br />
-            <br />
+            {/* BackHome */}
             <div className={'backHome'}>
+              <br />
               <li>
                 <NavLink exact to="/" activeClassName="navActive">
                   <i className="fas fa-home"></i>
@@ -106,3 +95,23 @@ class Avaibalities extends React.Component {
 
 
 export default Avaibalities;
+
+
+class Modal extends React.Component {
+  handleClick = () => {
+    this.props.toggle();
+  };
+  render() {
+    return (
+      <div className="modal">
+        <div className="modal_content">
+          <span className="close" onClick={this.handleClick}>&times;</span>
+          <p>Thanks for your booking</p>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+export default Modal;
