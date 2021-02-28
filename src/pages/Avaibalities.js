@@ -12,15 +12,18 @@ class Avaibalities extends React.Component {
       date: new Date(),
       showDate: false,
       showModal: false,
-      color: true
+      color: 'white'
     };
   }
   onChange = (date) => {
-    this.setState({ date });
+    this.setState({
+      date,
+      showDate: true
+    })
+
   };
   validation = () => {
     this.setState({
-      showDate: true,
       showModal: true
     });
   };
@@ -51,7 +54,7 @@ class Avaibalities extends React.Component {
 
   dayPicker = () => {
     this.setState({
-      color: !this.state.color
+      color: '#fff'
     })
   }
 
@@ -70,7 +73,7 @@ class Avaibalities extends React.Component {
               <h3>Please choose your dates </h3>
 
               {this.state.showModal && <Modal toggle={this.togglePop} />}
-              {'CalendarMain'} = this.state.color ? "blackButton" : "whiteButton";
+
               {/* Calendar */}
               <Calendar
                 className={'CalendarMain'}
@@ -78,7 +81,7 @@ class Avaibalities extends React.Component {
                 value={this.state.date}
                 selectRange={true}
                 locale="en-GB"
-                onclick={this.dayPicker.bind(this)}
+                onclickDay={(day) => this.dayPicker(day)}
               />
 
               <br />
@@ -102,11 +105,6 @@ class Avaibalities extends React.Component {
                   {this.state.date[1].toLocaleDateString()}
                 </p>
               }
-
-
-
-
-
               <br />
               <br />
 
