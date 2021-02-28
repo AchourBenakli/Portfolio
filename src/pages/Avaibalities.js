@@ -12,6 +12,7 @@ class Avaibalities extends React.Component {
       date: new Date(),
       showDate: false,
       showModal: false,
+      color: true
     };
   }
   onChange = (date) => {
@@ -20,8 +21,16 @@ class Avaibalities extends React.Component {
   validation = () => {
     this.setState({
       showDate: true,
+      showModal: true
     });
   };
+
+  // componentDidMount() {
+  //   showModal = setTimeout(() => console.log('Hello, World!'), 3000)
+  // }
+
+
+
   togglePop = () => {
     this.setState(prevState => ({
       showModal: !prevState.showModal
@@ -30,13 +39,19 @@ class Avaibalities extends React.Component {
 
   reset = () => {
     this.setState({
-      showDate: false,
-    });
+      showDate: null
+    })
   };
 
   handleSubmit() {
     this.setState({
       showModal: true
+    })
+  }
+
+  dayPicker = () => {
+    this.setState({
+      color: !this.state.color
     })
   }
 
@@ -47,16 +62,15 @@ class Avaibalities extends React.Component {
         <div className="home">
           <NavigationNew />
           <div className="calendarContent">
-
+            <br />
+            <br />
             {/* Title */}
             <div>
-              <br />
-              <br />
               <h2>My Avaibalities</h2>
               <h3>Please choose your dates </h3>
-              <br />
 
-
+              {this.state.showModal && <Modal toggle={this.togglePop} />}
+              {'CalendarMain'} = this.state.color ? "blackButton" : "whiteButton";
               {/* Calendar */}
               <Calendar
                 className={'CalendarMain'}
@@ -64,38 +78,47 @@ class Avaibalities extends React.Component {
                 value={this.state.date}
                 selectRange={true}
                 locale="en-GB"
+                onclick={this.dayPicker.bind(this)}
               />
-              {/* Button */}
+
               <br />
+              <br />
+
+
+
+              {/* Button */}
               <div>
                 <div>
+
                   <button className={'button'} onClick={this.validation}>Validate</button>
                   <button className={'button'} onClick={this.reset}>Reset</button>
                 </div>
                 {/* Show date */}
               </div>
-              {this.state.showDate ? (
-                <div>
-                  <p>
-                    From : {this.state.date[0].toLocaleDateString()} to :{' '}
-                    {this.state.date[1].toLocaleDateString()}
-                  </p>
-                  <br />
-                </div>
-              ) : null}
-            </div>
+              {this.state.showDate
+                &&
+                <p>
+                  From : {this.state.date[0].toLocaleDateString()} to :{' '}
+                  {this.state.date[1].toLocaleDateString()}
+                </p>
+              }
 
-            {this.state.showModal && <Modal toggle={this.togglePop} />}
-            <br />
-            <br />
-            <br />
-            <div className={'backHome'}>
-              <li>
-                <NavLink exact to="/" activeClassName="navActive">
-                  <i className="fas fa-home"></i>
-                  <span>Back Home</span>
-                </NavLink>
-              </li>
+
+
+
+
+              <br />
+              <br />
+
+              {/* BackHome */}
+              <div className={'backHome'}>
+                <li>
+                  <NavLink exact to="/" activeClassName="navActive">
+                    <i className="fas fa-home"></i>
+                    <span>Back Home</span>
+                  </NavLink>
+                </li>
+              </div>
             </div>
           </div>
         </div>

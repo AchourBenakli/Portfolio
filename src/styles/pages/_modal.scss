@@ -1,6 +1,5 @@
 .modal {
   position: absolute;
-  margin-bottom: 50rem;
   width: 100%;
   height: 100%;
 }
@@ -11,7 +10,33 @@
   top: 0%;
   left: 30%;
   width: 40%;
-  padding: 20px;
+  height: 40%;
+  padding: 20px ;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 1px solid black;
+}
+
+.buttonModal {
+  border-radius: $borderRadius;
+  color: $grey;
+  width: 50px;
+  font-size: 1.5rem;
+  font-family: $font-1;
+  margin-top: 3rem;
+}
+
+.close{
+  font-size: 1rem;
+      background: white;
+      color: $white;
+      border:1px solid black;
+      border-radius: 50%;
+      padding: 0.5rem 0.8rem;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background: black;
+        transition: 0.3s ease;
+      }
 }
