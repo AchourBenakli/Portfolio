@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React from 'react';
 import NavigationNew from '../components/NavigationNew';
+
 
 
 // ✅ Creation d'une Class pour cree des objets et manipuler L'Heritage
@@ -18,23 +20,8 @@ class NameForm extends React.Component {
     numberFilled: '',
     mailFilled: '',
     messageFilled: '',
+    sent: false
   };
-
-  // ✅ Creation d'une methode react pour recuperer une valeur
-
-  handleSubmit(event) { // ✅ Alert Des que les champs input sont remplis et submit
-    event.preventDefault();
-    alert(
-      'Hello ' +
-      this.state.nameFilled +
-      ' we have registred the following number : ' +
-      this.state.numberFilled +
-      ' and your email ' +
-      this.state.mailFilled +
-      ' and here is your message :\n\n\n' +
-      this.state.messageFilled
-    );
-  }
 
   // ✅ Creation d'une methode react pour detecter une valeur
 
@@ -46,6 +33,48 @@ class NameForm extends React.Component {
       alert('Please enter a valid form');
     }
   }
+
+  // ✅ Creation d'une methode react pour recuperer une valeur
+
+  handleSubmit(event) { // ✅ Alert Des que les champs input sont remplis et submit
+    event.preventDefault();
+    let data = {
+      nameFilled: this.state.nameFilled,
+      numberFilled: this.state.numberFilled,
+      mailFilled: this.state.mailFilled,
+      messageFilled: this.state.messageFilled
+    }
+
+    axios.post('/api/forma', data).then(res => {
+      this.setState({
+        sent: true
+      }, this.resetForm())
+    }).catch(() => {
+      console.log('Message not sent')
+    })
+  }
+
+
+  //Reset Data
+
+  resetForm = () => {
+    this.setState({
+      nameFilled: '',
+      numberFilled: '',
+      mailFilled: '',
+      messageFilled: ''
+    })
+
+    setTimeout(() => {
+      this.setState({
+        sent: false
+      })
+    }, 3000)
+  }
+
+
+
+
   render() {
     return (
       <div className="contact">
