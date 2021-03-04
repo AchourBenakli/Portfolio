@@ -15,7 +15,7 @@ const Hobbies = () => {
         </li>
         <li className="hobby">
           <i className="fas fa-mountain"></i>
-          <span>Hiking(Taiwan and New Zealand, Paris now.)</span>
+          <span>Hiking (Taiwan and New Zealand, Paris now.)</span>
           <span></span>
         </li>
         <li className="hobby">
