@@ -4,18 +4,17 @@ import NavigationNew from '../components/NavigationNew';
 
 
 
-// ✅ Creation d'une Class pour cree des objets et manipuler L'Heritage
 
 class NameForm extends React.Component {
-  constructor(props) { // 🔴 On ne peut pas utiliser `this` à ce stade car le constructeur est appele avant que celui ci soit execute, il nous faut une methode react appele super
-    super(props); // ✅ Mais maintenant c’est bon !
-    this.handleSubmit = this.handleSubmit.bind(this); // ✅ La methode Bind permet a son event (handleSubmit ou onChange) detre appele partout dans le code.
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
   // ✅ Ajout d'un etat locale 
 
-  state = { // ✅ Attribution d'une valeur de base au state, vide car on veut des infos de la personne
+  state = {
     nameFilled: '',
     numberFilled: '',
     mailFilled: '',
@@ -25,10 +24,10 @@ class NameForm extends React.Component {
 
   // ✅ Creation d'une methode react pour detecter une valeur
 
-  onChange(event) { // ✅ Detecte la valeur du input ecrit
-    const re = /^[0-9\b]+$/; // ✅ On cree un Regex afin de dire a notre input d'accepter uniquement les chiffres 0-9, le backspace.
+  onChange(event) {
+    const re = /^[0-9\b]+$/;
     if (event.target.value === '' || re.test(event.target.value)) {
-      this.setState({ numberFilled: event.target.value }); // ✅ Mettre a jour la locale du sate => Dans le cas present, il enregistre la valeur ecrit, a savoir un chiffre entre 0 a 9 avec la methode regex et la condition dessus.
+      this.setState({ numberFilled: event.target.value });
     } else {
       alert('Please enter a valid form');
     }
@@ -36,7 +35,7 @@ class NameForm extends React.Component {
 
   // ✅ Creation d'une methode react pour recuperer une valeur
 
-  handleSubmit(event) { // ✅ Alert Des que les champs input sont remplis et submit
+  handleSubmit(event) {
     event.preventDefault();
     let data = {
       nameFilled: this.state.nameFilled,
@@ -71,9 +70,6 @@ class NameForm extends React.Component {
       })
     }, 3000)
   }
-
-
-
 
   render() {
     return (
@@ -123,6 +119,8 @@ class NameForm extends React.Component {
                   }
                 />
               </label>
+
+              <div className={this.state.sent ? 'msg msgAppear' : 'msg'}>Message sent</div>
               <label>
                 <input
                   type="submit"
