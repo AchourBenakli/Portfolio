@@ -1,13 +1,14 @@
 const express = require('express'); //On va chercher notre dependance dans notre module
 const nodeMailer = require('nodemailer');//On va chercher notre dependance dans notre module
 const cors = require('cors');//On va chercher notre dependance dans notre module
+const bodyParser = require('body-parser');//On va chercher notre dependance dans notre module
 
 
 const app = express();//On cree un instance de express pour faire marcher notre Api rest(le lien entre la demande client et la reponse du server)
 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get('/', () => {
@@ -17,28 +18,28 @@ app.get('/', () => {
 app.post('/api/forma', (req, res) => {
   let data = req.body
   let smtpTransport = nodeMailer.createTransport({
-    service: 'Yahoo',
-    port: '465',
+    service: 'Gmail',
+    port: 465,
     auth: {
-      user: 'achourbenakli@yahoo.fr',
-      pass: 'Dafr9212Wweoa'
+      user: 'achourbenakli10@gmail.com',
+      pass: 'Dafr9212Wweeg'
     }
   });
   let mailOptions = {
-    from: data.email,
+    from: data.emailFilled,
     to: `achourbenakli@yahoo.fr`,
-    subject: `Message from ${data.name}`,
+    subject: `Message from ${data.nameFilled}`,
     html: `
   <h3>Informations</h3>
   <ul>
-  <li>Name: ${data.name}</li>
-  <li>Name: ${data.number}</li>
-  <li>Name: ${data.mail}</li>
+  <li>Name: ${data.nameFilled}</li>
+  <li>Name: ${data.numberFilled}</li>
+  <li>Name: ${data.mailFilled}</li>
   </ul>
 
   <h3>Message</h3>
   <ul>
-  <li>Name: ${data.message}</li>
+  <li>Name: ${data.messageFilled}</li>
   </ul>
 
   `

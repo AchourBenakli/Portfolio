@@ -120,7 +120,7 @@ class NameForm extends React.Component {
                 />
               </label>
 
-              <div className={this.state.sent ? 'msg msgAppear' : 'msg'}>Message sent</div>
+              {this.state.sent && <p>Message sent :)</p>}
               <label>
                 <input
                   type="submit"
