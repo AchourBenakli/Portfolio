@@ -33,15 +33,14 @@ app.post('/api/forma', (req, res) => {
   <h3>Informations</h3>
   <ul>
   <li>Name: ${data.nameFilled}</li>
-  <li>Name: ${data.numberFilled}</li>
-  <li>Name: ${data.mailFilled}</li>
+  <li>Number: ${data.numberFilled}</li>
+  <li>Mail: ${data.mailFilled}</li>
   </ul>
 
   <h3>Message</h3>
   <ul>
-  <li>Name: ${data.messageFilled}</li>
+  <li>Message: ${data.messageFilled}</li>
   </ul>
-
   `
   };
 
