@@ -1,18 +1,18 @@
 const express = require('express'); //On va chercher notre dependance dans notre module
 const nodeMailer = require('nodemailer');//On va chercher notre dependance dans notre module
 const cors = require('cors');//On va chercher notre dependance dans notre module
-const bodyParser = require('body-parser');//On va chercher notre dependance dans notre module
+// const bodyParser = require('body-parser');//On va chercher notre dependance dans notre module
 
 
 const app = express();//On cree un instance de express pour faire marcher notre Api rest(le lien entre la demande client et la reponse du server)
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/', () => {
-  resizeBy.send('Welcome to my form')
+app.get('/Contact', (req, res) => {
+  res.send('GET request to the homepage');
 })
 
 app.post('/api/forma', (req, res) => {
