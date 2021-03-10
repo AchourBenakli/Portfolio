@@ -16,13 +16,14 @@ class Avaibalities extends React.Component {
   }
   onChange = (date) => {
     this.setState({
-      date
+      date,
+      showDate: true
     })
 
   };
   validation = () => {
     this.setState({
-      showDate: true,
+
       showModal: true
     });
   };
