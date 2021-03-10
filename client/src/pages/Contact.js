@@ -30,6 +30,9 @@ class NameForm extends React.Component {
     }
   }
 
+
+
+
   // ✅ Creation d'une methode react pour recuperer une valeur
 
   handleSubmit(event) {
@@ -117,7 +120,7 @@ class NameForm extends React.Component {
                 />
               </label>
 
-              {this.state.sent && <p>Message sent :)</p>}
+              {this.state.sent && <p className='messageContact'>Thank you for your message, i will contact you as soon as possible</p>}
               <label>
                 <input
                   type="submit"

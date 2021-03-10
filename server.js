@@ -1,7 +1,6 @@
 const express = require('express'); //On va chercher notre dependance dans notre module
 const nodeMailer = require('nodemailer');//On va chercher notre dependance dans notre module
 const cors = require('cors');//On va chercher notre dependance dans notre module
-// const bodyParser = require('body-parser');//On va chercher notre dependance dans notre module
 
 
 const app = express();//On cree un instance de express pour faire marcher notre Api rest(le lien entre la demande client et la reponse du server)
@@ -11,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get('/Contact', (req, res) => {
+app.get('/', (req, res) => {
   res.send('GET request to the homepage');
 })
 
