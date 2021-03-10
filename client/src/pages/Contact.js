@@ -26,7 +26,7 @@ class NameForm extends React.Component {
     if (event.target.value === '' || re.test(event.target.value)) {
       this.setState({ numberFilled: event.target.value });
     } else {
-      alert('Please enter a valid form');
+      alert('Please enter a number');
     }
   }
 
@@ -80,7 +80,7 @@ class NameForm extends React.Component {
             <h2>Contact Me</h2>
           </div>
           <div className="contactBox">
-            <form locale="en-GB">
+            <form locale="en-GB" >
               <label>
                 <input
                   type="text"

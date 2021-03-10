@@ -1,9 +1,9 @@
-const express = require('express'); //On va chercher notre dependance dans notre module
-const nodeMailer = require('nodemailer');//On va chercher notre dependance dans notre module
-const cors = require('cors');//On va chercher notre dependance dans notre module
+const express = require('express');
+// const bodyParser = require('body-parser')
+const nodeMailer = require('nodemailer');
+const cors = require('cors');
 
-
-const app = express();//On cree un instance de express pour faire marcher notre Api rest(le lien entre la demande client et la reponse du server)
+const app = express();
 
 
 app.use(express.json());
@@ -17,16 +17,18 @@ app.get('/', (req, res) => {
 app.post('/api/forma', (req, res) => {
   let data = req.body
   let smtpTransport = nodeMailer.createTransport({
-    service: 'Gmail',
-    port: 465,
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    requireTLS: true,
     auth: {
       user: 'achourbenakli10@gmail.com',
-      pass: 'Dafr9212Wweeg'
+      pass: 'kgoksfbdkhnpkmio'
     }
   });
   let mailOptions = {
-    from: data.emailFilled,
-    to: `achourbenakli@yahoo.fr`,
+    from: data.mailFilled,
+    to: `achourbenakli10@gmail.com`,
     subject: `Message from ${data.nameFilled}`,
     html: `
   <h3>Informations</h3>
@@ -52,8 +54,6 @@ app.post('/api/forma', (req, res) => {
   })
 
   smtpTransport.close();
-
-
 })
 
 const PORT = process.env.PORT || 3001;
