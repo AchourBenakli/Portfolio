@@ -15,14 +15,27 @@
   border-radius: 5px;
   border: 1px solid black;
 }
-
-.buttonModal {
+.buttonModalMain{
+  justify-content: space-between;
+}
+.buttonModalOk {
   border-radius: $borderRadius;
   color: $grey;
   width: 50px;
   font-size: 1.5rem;
   font-family: $font-1;
   margin-top: 3rem;
+}
+.buttonModalNo {
+  border-radius: $borderRadius;
+  color: $grey;
+  width: 110px;
+  font-size: 1.5rem;
+  font-family: $font-1;
+  margin-top: 3rem;
+  margin-left:65px;
+  
+ 
 }
 
 .close{

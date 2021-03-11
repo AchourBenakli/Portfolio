@@ -23,16 +23,9 @@ class Avaibalities extends React.Component {
   };
   validation = () => {
     this.setState({
-
       showModal: true
     });
   };
-
-  // componentDidMount() {
-  //   showModal = setTimeout(() => console.log('Hello, World!'), 3000)
-  // }
-
-
 
   togglePop = () => {
     this.setState(prevState => ({
@@ -64,9 +57,7 @@ class Avaibalities extends React.Component {
             {/* Title */}
             <div>
               <h2>My Avaibalities</h2>
-
               {this.state.showModal && <Modal toggle={this.togglePop} />}
-
               {/* Calendar */}
               <Calendar
                 className={'CalendarMain'}
@@ -75,16 +66,11 @@ class Avaibalities extends React.Component {
                 selectRange={true}
                 locale="en-GB"
               />
-
               <br />
               <br />
-
-
-
               {/* Button */}
               <div>
                 <div>
-
                   <button className={'button'} onClick={this.validation}>Validate</button>
                   <button className={'button'} onClick={this.reset}>Reset</button>
                 </div>
@@ -97,9 +83,9 @@ class Avaibalities extends React.Component {
                   {this.state.date[1].toLocaleDateString()}
                 </p>
               }
-              <br />
-              <br />
 
+              <br />
+              <br />
               {/* BackHome */}
               <div className={'backHome'}>
                 <li>

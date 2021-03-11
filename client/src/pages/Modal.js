@@ -9,7 +9,11 @@ class Modal extends React.Component {
       <div className="modal">
         <div className="modal_content">
           <span className="close" onClick={this.handleClick}>&times;</span>
-          <p>Thank you for your booking</p>
+          <p>Do you validate those dates</p>
+          <br />
+          <br />
+          <button className="buttonModalOk">Ok</button>
+          <button className="buttonModalNo">Cancel</button>
         </div>
       </div>
     );
