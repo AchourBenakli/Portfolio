@@ -7,10 +7,9 @@ import Modal from '../pages/Modal';
 class Avaibalities extends React.Component {
   constructor(props) {
     super(props)
-    this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
       date: new Date(),
-      showDate: false,
+      showDate: null,
       showModal: false
     };
   }
@@ -22,16 +21,18 @@ class Avaibalities extends React.Component {
 
   };
   validation = () => {
-    this.setState({
-      showModal: true
-    });
+    if (this.state.showDate) {
+      this.setState({
+        showDate: true,
+        showModal: true,
+        showDate: false
+      });
+    } else {
+      alert('Please enter a date')
+    } {
+    }
   };
 
-  togglePop = () => {
-    this.setState(prevState => ({
-      showModal: !prevState.showModal
-    }));
-  };
 
   reset = () => {
     this.setState({
@@ -39,13 +40,12 @@ class Avaibalities extends React.Component {
     })
   };
 
-  handleSubmit() {
-    this.setState({
-      showModal: true
-    })
-  }
 
-
+  togglePop = () => {
+    this.setState(prevState => ({
+      showModal: !prevState.showModal
+    }));
+  };
   render() {
     return (
       <div>
@@ -57,6 +57,8 @@ class Avaibalities extends React.Component {
             {/* Title */}
             <div>
               <h2>My Avaibalities</h2>
+
+              <h4>Please choose 2 dates and validate</h4>
               {this.state.showModal && <Modal toggle={this.togglePop} />}
               {/* Calendar */}
               <Calendar

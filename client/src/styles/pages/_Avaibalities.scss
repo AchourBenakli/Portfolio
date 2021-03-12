@@ -40,9 +40,11 @@
         font-size: 1.5rem;
         font-family: $font-1;
 
-        // &:focus {
-        //   background-color: red;
-        // }
+        &:focus{
+          background-color: $grey;
+          color: white;
+          transition: all 5s
+        }
       }
 
       .blackButton{
@@ -62,11 +64,11 @@
     h2 {
       text-align: center;
       padding-bottom: 20px;
-      color: $black;
     }
 
-    h3 {
-      margin-left: 1.3rem;
+    h4 {
+      text-align: center;
+      color: $black;
     }
 
 
