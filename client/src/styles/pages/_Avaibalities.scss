@@ -43,7 +43,7 @@
         &:focus{
           background-color: $grey;
           color: white;
-          transition: all 5s
+          transition: all 1s
         }
       }
 
@@ -56,12 +56,10 @@
         background-color: white;
         color: black;
       }
-
-
     }
 
-
     h2 {
+      color: $white;
       text-align: center;
       padding-bottom: 20px;
     }
