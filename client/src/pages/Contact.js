@@ -9,14 +9,14 @@ class NameForm extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  // ✅ Ajout d'un etat locale 
+  // ✅ Ajout d'un etat locale
 
   state = {
     nameFilled: '',
     numberFilled: '',
     mailFilled: '',
     messageFilled: '',
-    sent: false
+    sent: false,
   };
 
   // ✅ Creation d'une methode react pour detecter une valeur
@@ -30,9 +30,6 @@ class NameForm extends React.Component {
     }
   }
 
-
-
-
   // ✅ Creation d'une methode react pour recuperer une valeur
 
   handleSubmit(event) {
@@ -41,18 +38,23 @@ class NameForm extends React.Component {
       nameFilled: this.state.nameFilled,
       numberFilled: this.state.numberFilled,
       mailFilled: this.state.mailFilled,
-      messageFilled: this.state.messageFilled
-    }
+      messageFilled: this.state.messageFilled,
+    };
 
-    axios.post('/api/forma', data).then(res => {
-      this.setState({
-        sent: true
-      }, this.resetForm())
-    }).catch(() => {
-      console.log('Message not sent')
-    })
+    axios
+      .post('/api/forma', data)
+      .then((res) => {
+        this.setState(
+          {
+            sent: true,
+          },
+          this.resetForm()
+        );
+      })
+      .catch(() => {
+        console.log('Message not sent');
+      });
   }
-
 
   //Reset Data
 
@@ -61,15 +63,15 @@ class NameForm extends React.Component {
       nameFilled: '',
       numberFilled: '',
       mailFilled: '',
-      messageFilled: ''
-    })
+      messageFilled: '',
+    });
 
     setTimeout(() => {
       this.setState({
-        sent: false
-      })
-    }, 3000)
-  }
+        sent: false,
+      });
+    }, 3000);
+  };
 
   render() {
     return (
@@ -80,7 +82,7 @@ class NameForm extends React.Component {
             <h2>Contact Me</h2>
           </div>
           <div className="contactBox">
-            <form locale="en-GB" >
+            <form locale="en-GB">
               <label>
                 <input
                   type="text"
@@ -110,8 +112,9 @@ class NameForm extends React.Component {
                   }
                 />
               </label>
-              <label >
-                <textarea className={'textArea'}
+              <label>
+                <textarea
+                  className={'textArea'}
                   value={this.state.messageFilled}
                   placeholder="Type your message"
                   onChange={(event) =>
@@ -120,7 +123,12 @@ class NameForm extends React.Component {
                 />
               </label>
 
-              {this.state.sent && <p className='messageContact'>Thank you for your message, i will contact you as soon as possible</p>}
+              {this.state.sent && (
+                <p className="messageContact">
+                  Thank you for your message, i will contact you as soon as
+                  possible
+                </p>
+              )}
               <label>
                 <input
                   type="submit"
