@@ -20,7 +20,7 @@ const Hobbies = () => {
         </li>
         <li className="hobby">
           <i className="fas fa-music"></i>
-          <span>Making Music (house Music)</span>
+          <span>Making Music (electronic Music)</span>
         </li>
         <li className="hobby">
           <i className="fas fa-laptop-code"></i>

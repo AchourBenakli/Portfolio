@@ -15,28 +15,6 @@
   border-radius: 5px;
   border: 1px solid black;
 }
-.buttonModalMain{
-  justify-content: space-between;
-}
-.buttonModalOk {
-  border-radius: $borderRadius;
-  color: $grey;
-  width: 50px;
-  font-size: 1rem;
-  font-family: $font-1;
-  
- 
-}
-.buttonModalNo {
-  border-radius: $borderRadius;
-  color: $grey;
-  width: 110px;
-  font-size: 1rem;
-  font-family: $font-1;
-  
-  
- 
-}
 
 .close{
   font-size: 0.5rem;
@@ -52,5 +30,16 @@
         background: black;
         color: white;
         transition: 0.3s ease;
+      }
+
+      .mailFilled{
+        border-radius: $borderRadius;
+        font-size: 2rem;
+        background-color: red;
+        
+      }
+      .mailSubmit{
+padding: 20px;
+background-color: red;
       }
 }
