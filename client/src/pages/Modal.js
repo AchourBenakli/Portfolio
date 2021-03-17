@@ -40,7 +40,7 @@ class Modal extends React.Component {
             <label>
               <input
                 type="submit"
-                className="inputSubmit"
+                className={"inputSubmit"}
                 onClick={this.handleSubmit}
                 value="submit"
               />

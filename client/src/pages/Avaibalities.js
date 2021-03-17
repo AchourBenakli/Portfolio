@@ -20,6 +20,7 @@ class Avaibalities extends React.Component {
     })
 
   };
+
   validation = () => {
     if (this.state.showDate) {
       this.setState({
