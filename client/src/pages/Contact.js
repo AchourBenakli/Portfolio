@@ -52,7 +52,7 @@ class NameForm extends React.Component {
         );
       })
       .catch(() => {
-        console.log('Message not sent');
+        console.log('Your Message was not sent');
       });
   }
 
