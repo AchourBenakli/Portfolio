@@ -51,8 +51,8 @@ class NameForm extends React.Component {
           this.resetForm()
         );
       })
-      .catch(() => {
-        console.log('Your Message was not sent');
+      .catch(error => {
+        console.log(error.response);
       });
   }
 

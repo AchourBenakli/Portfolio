@@ -25,12 +25,10 @@ class Avaibalities extends React.Component {
     if (this.state.showDate) {
       this.setState({
         showDate: true,
-        showModal: true,
-        showDate: false
+        showModal: true
       });
     } else {
       alert('Please enter a date')
-    } {
     }
   };
 
