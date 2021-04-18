@@ -28,7 +28,7 @@ class Avaibalities extends React.Component {
         showModal: true
       });
     } else {
-      alert('Please enter a date')
+      alert('Please enter a valid date')
     }
   };
 
