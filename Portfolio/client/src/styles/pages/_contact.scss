@@ -1,0 +1,94 @@
+.contact {
+  .contactContent {
+    background: $grey;
+    min-height: $minHeight;
+    width: 100%;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+  }
+
+  .header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    padding: 5rem;
+    color: $black;
+    font-size: larger;
+  }
+  .contactBox {
+    display: flex;
+    width: 90%;
+    color: $black;
+    margin-top: -1rem;  
+margin-left: 4.5rem;
+  }  
+    input,
+    textarea {
+      width: 95%;
+      border: none;
+      border-radius: $borderRadius;
+      outline: none;
+      border-bottom: 1px solid $black;
+      color: $grey;
+      padding: 14px;
+      &::placeholder {
+        color: $black;
+        font-size: 15px;
+      }
+    }
+    .inputSubmit {
+      cursor: pointer;
+      margin-top: 30px;
+      &:hover{
+     color: $white;
+    background: black; 
+    }
+    
+    }
+  }
+  input {
+    margin-bottom: 20px;
+    font-family: $font-1;
+    
+
+  }
+.textArea {
+  height: 8.5rem;
+  }
+  h2 {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .messageContact{
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    padding: 20px ;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 200px;
+  }
+
+  @media screen and (max-width:580px){
+    .contactBox, form {
+      margin-left: -4rem;
+  
+    }
+  }
+
+

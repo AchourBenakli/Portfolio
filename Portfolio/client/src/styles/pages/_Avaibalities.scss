@@ -1,0 +1,106 @@
+.home {
+  .calendarContent {
+    background: $grey;
+    min-height: $minHeight;
+    width: 100%;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+    margin-left: 5px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .CalendarMain {
+      border-radius: $borderRadius;
+      width: 98%;
+      padding-left: 2%;
+      color: rgb(245, 245, 245);
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      margin-top: 3.9rem;
+
+      .react-calendar__tile:hover {
+        color: $white;
+        background: $black;
+      }
+
+      button {
+        border-radius: $borderRadius;
+        color: $grey;
+        width: 100px;
+        font-size: 1.5rem;
+        font-family: $font-1;
+
+        &:focus{
+          background-color: $grey;
+          color: white;
+          transition: all 1s
+        }
+      }
+
+      .blackButton{
+        background-color: black;
+        color: white;
+      }
+      
+      .whiteButton{
+        background-color: white;
+        color: black;
+      }
+    }
+
+    h2 {
+      color: $white;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    h4 {
+      text-align: center;
+      color: $black;
+    }
+
+
+    p {
+      color: $black;
+      margin-top: 1rem;
+      margin-left: 1.3rem;
+    }
+
+    .button {
+      border-radius: $borderRadius;
+      color: $grey;
+      width: 20rem;
+      height: 2rem;
+      font-family: $font-1;
+      font-size: larger;
+      margin-left: 1rem;
+    }
+
+    .buttonReset {
+      border-radius: $borderRadius;
+      color: $grey;
+      width: 20rem;
+      height: 2rem;
+      font-family: $font-1;
+      font-size: larger;
+      margin-left: 1rem;
+    }
+
+    .backHome {
+      margin-left: 1.2rem;
+      margin-top: -1rem;
+    }
+
+  }
+
+}
