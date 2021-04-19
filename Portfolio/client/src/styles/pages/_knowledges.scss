@@ -244,30 +244,36 @@
 @media screen and (max-width: 700px) {
 
   .knowledges .knowledgesContent,
-  .knowledges .knowledgesContent{
+  .knowledges .knowledgesContent {
 
-  display: inline-block;
-  .experience
- {
-    background: none;
-  }
+    .programsLanguages {
+      margin-right: 0px;
+    }
 
-  .hobbies{
-    position: relative; 
-    top: 10px;
-    background: none;
-  }
-  .programsLanguages{
-    background: none;
-  }
+    display: inline-block;
 
-  .hobby {
-    position: relative;
-  }
+    .experience {
+      margin-right: 0px;
+    }
 
-  .progressBar,
-  span {
-    display: none;
+    .hobbies {
+      position: relative;
+      top: 10px;
+      padding-left: 10px;
+      margin-left: 0px;
+    }
+
+    // .programsLanguages{
+    //   // background: none;
+    // }
+
+    .hobby {
+      position: relative;
+    }
+
+    .progressBar,
+    span {
+      display: none;
+    }
   }
-}
 }
