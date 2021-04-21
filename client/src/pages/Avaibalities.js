@@ -18,7 +18,6 @@ class Avaibalities extends React.Component {
       date,
       showDate: true
     })
-
   };
 
   validation = () => {
