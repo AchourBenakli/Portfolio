@@ -17,7 +17,7 @@ class Bookme extends React.Component {
         <NavLink exact to="/Avaibalities" activeClassName="navActive">
           <button
             onClick={() => this.setState({ displayAvailabilities: true })}>
-            Send your dates please
+            Send your dates
         </button>
         </NavLink>
       </div>
