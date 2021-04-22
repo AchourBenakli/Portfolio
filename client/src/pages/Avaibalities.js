@@ -13,7 +13,7 @@ class Avaibalities extends React.Component {
       showModal: false
     };
   }
-  onChange = (date) => {
+  onChange = date => {
     this.setState({
       date,
       showDate: true
@@ -58,7 +58,7 @@ class Avaibalities extends React.Component {
               <h2>My Avaibalities</h2>
 
               <h4>Please choose 2 dates and validate</h4>
-              {this.state.showModal && <Modal toggle={this.togglePop} />}
+              {this.state.showModal && <Modal toggle={this.togglePop} date={this.state.date} />}
               {/* Calendar */}
               <Calendar
                 className={'CalendarMain'}
@@ -71,12 +71,10 @@ class Avaibalities extends React.Component {
               <br />
               {/* Button */}
               <div>
-                <div>
-                  <button className={'button'} onClick={this.validation}>Validate</button>
-                  <button className={'button'} onClick={this.reset}>Reset</button>
-                </div>
-                {/* Show date */}
+                <button className={'button'} onClick={this.validation}>Validate</button>
+                <button className={'button'} onClick={this.reset}>Reset</button>
               </div>
+              {/* Show date */}
               {this.state.showDate
                 &&
                 <p>

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 
 class Modal extends React.Component {
@@ -7,14 +8,31 @@ class Modal extends React.Component {
   }
 
   state = {
-    mailFilled: ''
+    mailFilled: '',
+    sent: false
   };
   handleClick = () => {
     this.props.toggle();
   };
 
-  handleSubmit = () => {
-    alert('Your request was sent')
+  handleSubmit = (event) => {
+    event.preventDefault();
+    let data = {
+      mailFilled: this.state.mailFilled
+    };
+    axios
+      .post('/api/forma', data)
+      .then((res) => {
+        this.setState(
+          {
+            sent: true,
+          },
+          alert('Thank you for your request')
+        );
+      })
+      .catch(error => {
+        console.log(error.response);
+      });
   }
 
   render() {
@@ -24,6 +42,7 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
+          <div>your dates are : {this.props.date}</div>
           <div className={'mailFilled'}>
             <label>
               <input
