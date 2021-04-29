@@ -21,6 +21,7 @@ class Modal extends React.Component {
     let data = {
       mailFilled: this.state.mailFilled
     };
+
     axios
       .post('/api/forma', data)
       .then((res) => {
@@ -43,6 +44,7 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
+          <div>your dates are : {this.props.date}</div>
           <div className={'mailFilled'}>
             <label>
               <input
