@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 
+
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +43,6 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
-          <div>your dates are : {this.props.date}</div>
           <div className={'mailFilled'}>
             <label>
               <input
