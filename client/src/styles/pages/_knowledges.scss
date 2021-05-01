@@ -244,30 +244,28 @@
 @media screen and (max-width: 700px) {
 
   .knowledges .knowledgesContent,
-  .knowledges .knowledgesContent{
+  .knowledges .knowledgesContent {
 
-  display: inline-block;
-  .experience
- {
-    background: none;
-  }
+    display: inline-block;
 
-  .hobbies{
-    position: relative; 
-    top: 10px;
-    background: none;
-  }
-  .programsLanguages{
-    background: none;
-  }
 
-  .hobby {
-    position: relative;
-  }
+    .hobbies {
+      position: relative;
+      top: 10px;
+      margin-left: 0px;
+    }
 
-  .progressBar,
-  span {
-    display: none;
+    .programsLanguages {
+      margin-right: 0px;
+    }
+
+    .hobby {
+      position: relative;
+    }
+
+    .progressBar,
+    span {
+      display: none;
+    }
   }
-}
 }
