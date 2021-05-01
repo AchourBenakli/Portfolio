@@ -11,35 +11,25 @@
   left: 30%;
   width: 40%;
   height: 40%;
-  padding: 20px ;
+  padding: 20px;
   border-radius: 5px;
   border: 1px solid black;
 }
 
-.close{
+.close {
+  float: right;
   font-size: 0.5rem;
-      background: white;
-      color: black;
-      border:1px solid black;
-      border-radius: 50%;
-      padding: 0.5rem 0.8rem;
-      transition: 0.3s;
-      cursor: pointer;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
+  transition: 0.3s;
+  cursor: pointer;
 
-      &:hover {
-        background: black;
-        color: white;
-        transition: 0.3s ease;
-      }
-
-      .mailFilled{
-        border-radius: $borderRadius;
-        font-size: 2rem;
-      color: red;
-        
-      }
-      .mailSubmit{
-padding: 20px;
-color: red;
-      }
+  &:hover {
+    background: black;
+    color: white;
+    transition: 0.3s ease;
+  }
 }

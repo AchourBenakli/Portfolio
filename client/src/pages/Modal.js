@@ -44,8 +44,8 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
-          <div>your dates are : {this.props.date}</div>
-          <div className={'mailFilled'}>
+          <div>{this.props.date}</div>
+          <div className='mailFilled'>
             <label>
               <input
                 type="text"
@@ -57,16 +57,14 @@ class Modal extends React.Component {
               />
             </label>
           </div>
-          <div className={'mailSubmit'}>
-            <label>
-              <input
-                type="submit"
-                className={"inputSubmit"}
-                onClick={this.handleSubmit}
-                value="submit"
-              />
-            </label>
-          </div>
+          <label>
+            <input
+              type="submit"
+              className={"inputSubmit"}
+              onClick={this.handleSubmit}
+              value="submit"
+            />
+          </label>
         </div>
       </div>
     );
