@@ -60,6 +60,20 @@
       color: $white;
       background: black;
     }
+  }
+
+
+  @media screen and (max-width: 850px) {
+    .contactBox {
+      margin-left: 1rem;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+    .contactBox {
+      margin-left: 0.5rem;
+    }
 
   }
 }
