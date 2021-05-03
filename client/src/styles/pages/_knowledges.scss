@@ -246,9 +246,7 @@
 
   .knowledges .knowledgesContent,
   .knowledges .knowledgesContent {
-
     display: inline-block;
-
 
     .hobbies {
       position: relative;
@@ -259,6 +257,11 @@
 
     .programsLanguages {
       margin-right: 0px;
+
+      span {
+        display: none;
+      }
+
     }
 
     .hobby {
@@ -277,10 +280,7 @@
 
     }
 
-
-
-    .progressBar,
-    span {
+    .progressBar {
       display: none;
     }
   }
