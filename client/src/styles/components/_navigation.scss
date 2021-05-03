@@ -17,10 +17,10 @@
     grid-area: 1;
     text-align: center;
     user-select: none;
-position: relative;
+    position: relative;
 
-    
-  
+
+
     .idContent {
       position: absolute;
       bottom: 0;
@@ -126,6 +126,24 @@ position: relative;
   }
 }
 
+@media screen and (max-width: 1000px) and (min-width : 850px) {
+  .sidebar {
+    min-height: 50px;
+    margin-bottom: 0.2rem;
+    width: 200px;
+
+    h3 {
+      display: none;
+    }
+
+    .socialNetwork {
+      display: none;
+    }
+  }
+}
+
+
+
 @media screen and (max-width:850px) {
   .sidebar {
     display: flex;
@@ -148,7 +166,7 @@ position: relative;
 
         i {
           margin-top: 0.4rem;
-        
+
         }
 
         span {
@@ -165,16 +183,16 @@ position: relative;
     ul {
       justify-content: space-evenly;
       transform: translateY(-10px);
-     
+
 
       li {
-        padding: 0.1rem 0.1rem; 
+        padding: 0.1rem 0.1rem;
       }
 
       i {
         font-size: 1.4rem;
         padding: 0.2rem;
-        align-items: center;   
+        align-items: center;
       }
 
       span {

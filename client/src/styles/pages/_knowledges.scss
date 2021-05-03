@@ -166,9 +166,7 @@
       display: grid;
       height: 100%;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 11%;
-
-
+      grid-template-rows: 13%;
 
       h3 {
         padding: 0;
@@ -193,7 +191,6 @@
       }
 
       .hobby {
-        // margin-top: -10px;
         padding: 0;
       }
     }
@@ -241,6 +238,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) and (min-width : 850px) {
+  .hobby {
+    position: relative;
+    bottom: 10px;
+  }
+}
+
 
 @media screen and (max-width: 700px) {
 
