@@ -63,6 +63,13 @@
   }
 
 
+  @media screen and (max-width: 1500px) and (min-width:1280px) {
+    .contactBox {
+      position: relative;
+      top: 20px;
+    }
+  }
+
   @media screen and (max-width: 850px) {
     .contactBox {
       margin-left: 1rem;
