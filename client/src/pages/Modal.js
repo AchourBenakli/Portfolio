@@ -16,10 +16,6 @@ class Modal extends React.Component {
     this.props.toggle();
   };
 
-  modalDate = () => {
-    this.props.dateToggle();
-  }
-
   handleSubmit = (event) => {
     event.preventDefault();
     let data = {
@@ -48,7 +44,7 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
-          <div><p>Your dates : {this.props.ModalDate}</p></div>
+          <div><p>Your dates : {this.props.showDate}</p></div>
           <div className='mailFilled'>
             <label>
               <input

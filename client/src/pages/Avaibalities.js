@@ -65,7 +65,7 @@ class Avaibalities extends React.Component {
 
               <h4>Please choose 2 dates and validate</h4>
 
-              {this.state.showModal && <Modal toggle={this.togglePop} dateInModal={this.dateToggle} />}
+              {this.state.showModal && <Modal date={this.state} toggle={this.togglePop} />}
 
 
 
