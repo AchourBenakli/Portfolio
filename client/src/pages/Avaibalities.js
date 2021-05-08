@@ -32,19 +32,25 @@ class Avaibalities extends React.Component {
     }
   };
 
-
   reset = () => {
     this.setState({
       showDate: null
     })
   };
 
-
   togglePop = () => {
     this.setState(prevState => ({
       showModal: !prevState.showModal
     }));
   };
+
+  dateToggle = date => {
+    this.setState({
+      date,
+      showDate: true
+    });
+  }
+
   render() {
     return (
       <div>
@@ -58,7 +64,11 @@ class Avaibalities extends React.Component {
               <h2>My Avaibalities</h2>
 
               <h4>Please choose 2 dates and validate</h4>
-              {this.state.showModal && <Modal toggle={this.togglePop} dateInModal={this.state.date} />}
+
+              {this.state.showModal && <Modal toggle={this.togglePop} dateInModal={this.dateToggle} />}
+
+
+
               {/* Calendar */}
               <Calendar
                 className={'CalendarMain'}
