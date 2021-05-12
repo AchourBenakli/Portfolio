@@ -40,15 +40,15 @@ class Modal extends React.Component {
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
-          <div>
-            {this.props.dateModal && <p>
+          <br />
+          <div className={'modalDate'}>
+            {this.props.dateModal && <p className={'modalp'}>From :
               {this.props.dateModal[0].toLocaleDateString()} to : {this.props.dateModal[1].toLocaleDateString()}
             </p>
             }
           </div>
-
           <div className='mailFilled'>
-            <label>
+            <label className={'modalLabel'}>
               <input
                 type="text"
                 placeholder="Please write your email"

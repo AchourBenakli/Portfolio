@@ -17,6 +17,8 @@
 }
 
 .close {
+  position: relative;
+  bottom: 10px;
   float: right;
   font-size: 0.5rem;
   background: white;
@@ -32,4 +34,35 @@
     color: white;
     transition: 0.3s ease;
   }
+}
+
+.modalDate {
+  margin-left: -20px;
+}
+
+.modalp {
+  position: relative;
+  bottom: 20px;
+  margin-left: 0px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .modal_content {
+    width: 70%;
+    left: 15%;
+    margin: 0px;
+
+    // span,
+    // .modalDate,
+    // .mailFilled,
+    // label {
+    //   background-color: red;
+    //   left: 0%;
+    // }
+
+  }
+
+
 }
