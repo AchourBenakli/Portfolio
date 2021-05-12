@@ -9,7 +9,8 @@ class Modal extends React.Component {
   }
   state = {
     mailFilled: '',
-    sent: false
+    sent: false,
+    hello: this.props.dateModal
   };
   handleClick = () => {
     this.props.toggle();
@@ -37,7 +38,7 @@ class Modal extends React.Component {
 
 
   render() {
-    this.state = this.props.dateModal;
+
     return (
       <div className="modal">
         <div className="modal_content">
@@ -47,7 +48,10 @@ class Modal extends React.Component {
 
           <div>
             {this.state.map(lol => {
-              return (<p>{this.props.handleModal}</p>)
+              return (
+                <p>{this.setState({
+                  lol: this.state.hello
+                })}</p>)
             })}
           </div>
 
