@@ -10,7 +10,6 @@ class Modal extends React.Component {
   state = {
     mailFilled: '',
     sent: false,
-    hello: this.props.dateModal
   };
   handleClick = () => {
     this.props.toggle();
@@ -34,25 +33,18 @@ class Modal extends React.Component {
         console.log(error.response);
       });
   }
-
-
-
   render() {
-
     return (
       <div className="modal">
         <div className="modal_content">
           <span className="close" onClick={this.handleClick}>&times;</span>
           <br />
           <br />
-
           <div>
-            {this.state.map(lol => {
-              return (
-                <p>{this.setState({
-                  lol: this.state.hello
-                })}</p>)
-            })}
+            {this.props.dateModal && <p>
+              {this.props.dateModal[0].toLocaleDateString()} to : {this.props.dateModal[1].toLocaleDateString()}
+            </p>
+            }
           </div>
 
           <div className='mailFilled'>
