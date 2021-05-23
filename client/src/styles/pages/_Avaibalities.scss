@@ -1,7 +1,8 @@
 .home {
   .calendarContent {
     background: $grey;
-    min-height: $minHeight;
+    // min-height: $minHeight;
+    min-height: 100%;
     width: 100%;
     border-radius: $borderRadius;
     position: relative;
@@ -80,7 +81,7 @@
     .button {
       border-radius: $borderRadius;
       color: $grey;
-      width: 20rem;
+      width: 18rem;
       height: 2rem;
       font-family: $font-1;
       font-size: larger;
@@ -101,7 +102,41 @@
       margin-left: 1.2rem;
       margin-top: -1rem;
     }
+  }
+}
 
+@media screen and (max-width: 850px) and (min-width:624px) {
+  .home .calendarContent {
+    margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 624px) and (min-width: 324px) {
+
+  .home .calendarContent h2 {
+    margin-top: 20px;
   }
 
+  .home .calendarContent {
+    margin-left: 0rem;
+  }
+
+  .home .calendarContent .button {
+    width: 12rem;
+    margin: 5px;
+    margin-left: 10px;
+  }
+
+  .home .calendarContent p {
+    margin-left: 1rem;
+  }
+
+  br {
+    display: none;
+  }
+
+  .home .calendarContent .backHome {
+    margin-top: 0rem;
+    margin-left: 0.8rem;
+  }
 }

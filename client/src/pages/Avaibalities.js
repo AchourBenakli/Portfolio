@@ -72,10 +72,11 @@ class Avaibalities extends React.Component {
               <br />
               <br />
               {/* Button */}
-              <div>
+              <div className={'buttonAvaibalities'}>
                 <button className={'button'} onClick={this.validation}>Validate</button>
                 <button className={'button'} onClick={this.reset}>Reset</button>
               </div>
+              <br />
               {/* Show date */}
               {this.state.showDate
                 &&
