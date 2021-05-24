@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React from 'react';
 
-
 class Modal extends React.Component {
   constructor(props) {
     super(props);
@@ -19,8 +18,9 @@ class Modal extends React.Component {
     let data = {
       mailFilled: this.state.mailFilled
     };
+
     axios
-      .post('/api/forma', data)
+      .post('/api/senddates', data)
       .then((res) => {
         this.setState(
           {
