@@ -22,6 +22,7 @@ function contact(req, res) {
   <h3>Informations</h3>
   <ul>
   <li>Mail: ${data.mailFilled}</li>
+  <li>Request Date : ${data.date}</li>
   </ul>
   `
   };
@@ -67,3 +68,4 @@ function sendEmail(req, res) {
   smtpTransport.close();
 }
 module.exports = { sendEmail, contact }
+

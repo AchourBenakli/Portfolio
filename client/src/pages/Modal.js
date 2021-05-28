@@ -10,15 +10,17 @@ class Modal extends React.Component {
     mailFilled: '',
     sent: false,
   };
+
   handleClick = () => {
     this.props.toggle();
   };
+
   handleSubmit = (event) => {
     event.preventDefault();
     let data = {
-      mailFilled: this.state.mailFilled
+      mailFilled: this.state.mailFilled,
+      date: this.props.dateModal
     };
-
     axios
       .post('/api/senddates', data)
       .then((res) => {
