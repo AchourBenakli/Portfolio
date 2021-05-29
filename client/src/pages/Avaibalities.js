@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import NavigationNew from '../components/NavigationNew';
 import Modal from '../pages/Modal';
 
+
+
 class Avaibalities extends React.Component {
   constructor(props) {
     super(props)
@@ -18,7 +20,6 @@ class Avaibalities extends React.Component {
       date,
       showDate: true
     })
-
   };
 
   validation = () => {
@@ -62,6 +63,8 @@ class Avaibalities extends React.Component {
 
               {this.state.showModal && <Modal dateModal={this.state.date} toggle={this.togglePop} />}
               {/* Calendar */}
+
+
               <Calendar
                 className={'CalendarMain'}
                 onChange={this.onChange}

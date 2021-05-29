@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Knowledges from './pages/Knowledges';
 import NotFound from './pages/NotFound';
+
 const App = () => {
   return (
     <>

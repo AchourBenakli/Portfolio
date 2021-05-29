@@ -1,4 +1,5 @@
 import axios from 'axios';
+import moment from 'moment';
 import React from 'react';
 
 class Modal extends React.Component {
@@ -17,9 +18,14 @@ class Modal extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    const format2 = "MM-DD-YYYY"
+    const dateFirst = moment(this.props.dateModal[0]).format(format2);
+    const dateSecond = moment(this.props.dateModal[1]).format(format2);
+
     let data = {
       mailFilled: this.state.mailFilled,
-      date: this.props.dateModal
+      dateIn: dateFirst,
+      dateOut: dateSecond
     };
     axios
       .post('/api/senddates', data)
@@ -35,6 +41,7 @@ class Modal extends React.Component {
         console.log(error.response);
       });
   }
+
   render() {
     return (
       <div className="modal">
@@ -43,7 +50,7 @@ class Modal extends React.Component {
           <br />
           <br />
           <br />
-          <div className={'modalDate'}>
+          <div className={'modalDate'} >
             {this.props.dateModal && <p className={'modalp'}>From :
               {this.props.dateModal[0].toLocaleDateString()} to : {this.props.dateModal[1].toLocaleDateString()}
             </p>

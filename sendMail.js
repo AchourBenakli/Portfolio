@@ -1,5 +1,4 @@
 const nodeMailer = require('nodemailer');
-
 const details = {
   host: 'smtp.gmail.com',
   port: 587,
@@ -22,7 +21,8 @@ function contact(req, res) {
   <h3>Informations</h3>
   <ul>
   <li>Mail: ${data.mailFilled}</li>
-  <li>Request Date : ${data.date}</li>
+  <li>Request DateIn: ${data.dateIn}</li>
+  <li>Request DateOut : ${data.dateOut}</li>
   </ul>
   `
   };
