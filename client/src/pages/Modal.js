@@ -29,12 +29,17 @@ class Modal extends React.Component {
     axios
       .post('/api/senddates', data)
       .then((res) => {
-        this.setState(
-          {
-            sent: true,
-          },
-          alert('Thank you for your request')
-        );
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.state.mailFilled)) {
+          this.setState(
+            {
+              sent: true,
+            },
+            alert('Thank you for your request')
+          );
+        } else {
+          alert('Pleaser enter a valid mail')
+        }
+
       })
       .catch(error => {
         console.log(error.response);
