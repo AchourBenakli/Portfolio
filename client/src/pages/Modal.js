@@ -21,7 +21,6 @@ class Modal extends React.Component {
     const format2 = "MM-DD-YYYY"
     const dateFirst = moment(this.props.dateModal[0]).format(format2);
     const dateSecond = moment(this.props.dateModal[1]).format(format2);
-
     let data = {
       mailFilled: this.state.mailFilled,
       dateIn: dateFirst,

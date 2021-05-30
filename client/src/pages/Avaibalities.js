@@ -15,12 +15,14 @@ class Avaibalities extends React.Component {
       showModal: false
     };
   }
+
   onChange = date => {
     this.setState({
       date,
       showDate: true
     })
   };
+
 
   validation = () => {
     if (this.state.showDate) {
@@ -68,7 +70,6 @@ class Avaibalities extends React.Component {
               <Calendar
                 className={'CalendarMain'}
                 onChange={this.onChange}
-                value={this.state.date}
                 selectRange={true}
                 locale="en-GB"
               />
