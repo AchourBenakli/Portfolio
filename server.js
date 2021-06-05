@@ -1,21 +1,20 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const app = express();
 const { sendEmail, contact } = require('./sendMail');
-const PORT = process.env.PORT || 3001;
-;
+const PORT = process.env.PORT || 3000;
+const path = require('path');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
+const publicPath = path.join(__dirname, 'client', 'build');
+app.use(express.static(publicPath));
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join("client/build")))
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-//   })
-// }
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
-app.use("/users/", require("./routes/routes"));
 
 app.get('/', (req, res) => {
   res.send('GET request to the homepage');
