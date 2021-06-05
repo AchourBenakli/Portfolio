@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Josefin+Sans:wght@100&family=Poppins&display=swap");
+
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -10,7 +11,7 @@
   height: 100px;
   border-radius: 100%;
   -webkit-box-shadow: 0 0 0 4px black;
-          box-shadow: 0 0 0 4px black;
+  box-shadow: 0 0 0 4px black;
 }
 
 body {
@@ -38,24 +39,34 @@ a:visited {
   color: #A9A9A9;
 }
 
-.home, .knowledges, .contact {
+.home,
+.knowledges,
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (max-width: 850px) {
-  .home, .knowledges, .contact {
+
+  .home,
+  .knowledges,
+  .contact {
     display: block;
   }
 }
 
-.homeContent, .knowledgesContent, .contactContent {
+.homeContent,
+.knowledgesContent,
+.contactContent {
   margin-left: .4rem;
 }
 
 @media screen and (max-width: 850px) {
-  .homeContent, .knowledgesContent, .contactContent {
+
+  .homeContent,
+  .knowledgesContent,
+  .contactContent {
     margin-left: 0;
   }
 }
@@ -71,10 +82,12 @@ a:visited {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   -ms-grid-rows: 250px 1fr 108px;
-      grid-template-rows: 250px 1fr 108px;
-      grid-template-areas: "1" "2" "3";
+  grid-template-rows: 250px 1fr 108px;
+  grid-template-areas: "1"
+    "2"
+    "3";
 }
 
 .sidebar .id {
@@ -83,9 +96,9 @@ a:visited {
   grid-area: 1;
   text-align: center;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
 }
 
@@ -94,7 +107,7 @@ a:visited {
   bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 100%;
 }
 
@@ -127,7 +140,7 @@ a:visited {
 
 .sidebar .navigation ul li:hover i {
   -webkit-transform: translate(3px, 3px);
-          transform: translate(3px, 3px);
+  transform: translate(3px, 3px);
 }
 
 .sidebar .navigation ul li a {
@@ -142,7 +155,7 @@ a:visited {
   position: absolute;
   font-size: 0.95rem;
   -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -164,8 +177,8 @@ a:visited {
   width: 264px;
   padding: 0 14px;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .socialNetwork ul li {
@@ -215,24 +228,29 @@ a:visited {
     margin-bottom: 0.2rem;
     width: 100%;
   }
+
   .sidebar .id,
   .sidebar .socialNetwork {
     display: none;
   }
+
   .sidebar .navigation {
     width: 100%;
     padding: 0.1rem 0.1rem;
   }
+
   .sidebar .navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
+
   .sidebar .navigation ul i {
     margin-top: 0.4rem;
   }
+
   .sidebar .navigation ul span {
     margin-left: 1.5rem;
   }
@@ -241,21 +259,24 @@ a:visited {
 @media screen and (max-width: 500px) {
   .sidebar ul {
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
+
   .sidebar ul li {
     padding: 0.1rem 0.1rem;
   }
+
   .sidebar ul i {
     font-size: 1.4rem;
     padding: 0.2rem;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
+
   .sidebar ul span {
     display: none;
   }
@@ -278,7 +299,7 @@ a:visited {
   width: inherit;
   z-index: -1;
   -webkit-filter: brightness(30%);
-          filter: brightness(30%);
+  filter: brightness(30%);
 }
 
 .home .homeContent .content {
@@ -309,7 +330,7 @@ a:visited {
   padding: 1rem 2rem;
   border-radius: 25px;
   -webkit-box-shadow: 0 5px 1px #0f0f0f;
-          box-shadow: 0 5px 1px #0f0f0f;
+  box-shadow: 0 5px 1px #0f0f0f;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
@@ -348,6 +369,7 @@ a:visited {
   .homeContent h1 {
     font-size: 3rem !important;
   }
+
   .homeContent h2 {
     font-size: 1.8rem !important;
   }
@@ -361,10 +383,11 @@ a:visited {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 35% 1fr 1fr;
-      grid-template-columns: 35% 1fr 1fr;
+  grid-template-columns: 35% 1fr 1fr;
   -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
-      grid-template-areas: 'E E E' 'P L H';
+  grid-template-rows: 100%;
+  grid-template-areas: 'E E E'
+    'P L H';
 }
 
 .knowledges .knowledgesContent .programsLanguages,
@@ -391,10 +414,11 @@ a:visited {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: 'P' 'L';
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'P'
+    'L';
   height: 100%;
 }
 
@@ -420,8 +444,8 @@ a:visited {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   color: whitesmoke;
 }
 
@@ -444,14 +468,16 @@ a:visited {
   width: 34%;
 }
 
-.knowledges .knowledgesContent .programsLanguages .years span:nth-child(2):before, .knowledges .knowledgesContent .programsLanguages .years span:nth-child(3):before, .knowledges .knowledgesContent .programsLanguages .years span:nth-child(4):before {
+.knowledges .knowledgesContent .programsLanguages .years span:nth-child(2):before,
+.knowledges .knowledgesContent .programsLanguages .years span:nth-child(3):before,
+.knowledges .knowledgesContent .programsLanguages .years span:nth-child(4):before {
   content: '';
   background: rgba(190, 179, 179, 0.9);
   position: absolute;
   height: 146px;
   width: 1px;
   -webkit-transform: translate(9px, 19px);
-          transform: translate(9px, 19px);
+  transform: translate(9px, 19px);
 }
 
 .knowledges .knowledgesContent .programsLanguages .programsList {
@@ -478,7 +504,7 @@ a:visited {
   height: 0.4rem;
   width: 0;
   -webkit-animation: line 2s ease-out forwards;
-          animation: line 2s ease-out forwards;
+  animation: line 2s ease-out forwards;
 }
 
 @-webkit-keyframes line {
@@ -517,7 +543,7 @@ a:visited {
   height: 0.4rem;
   width: 0;
   -webkit-animation: line 2s ease-out forwards;
-          animation: line 2s ease-out forwards;
+  animation: line 2s ease-out forwards;
 }
 
 @keyframes line {
@@ -533,7 +559,7 @@ a:visited {
   display: grid;
   height: 100%;
   -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .knowledges .knowledgesContent .hobbies h3 {
@@ -595,19 +621,22 @@ a:visited {
 .knowledges .experience ul li span {
   position: absolute;
   -webkit-transform: translateX(2.2rem);
-          transform: translateX(2.2rem);
+  transform: translateX(2.2rem);
 }
 
 @media screen and (max-width: 950px) {
   .knowledgesContent h3 {
     font-size: 1.2rem !important;
   }
+
   .knowledgesContent .languagesList {
     padding-top: 0.2rem !important;
   }
+
   .knowledgesContent p {
     font-size: 0.8rem;
   }
+
   .knowledgesContent .otherSkills,
   .knowledgesContent .hobbies {
     font-size: 0.8rem;
@@ -618,6 +647,7 @@ a:visited {
   .knowledgesContent h4 {
     font-size: 0.9rem !important;
   }
+
   .knowledgesContent h5 {
     font-size: 0.6rem !important;
     padding: 0.2rem 1rem !important;
@@ -629,21 +659,24 @@ a:visited {
     display: -ms-grid !important;
     display: grid !important;
     -ms-grid-columns: 1fr !important;
-        grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr !important;
     -ms-grid-rows: 1fr 1fr 180px 180px !important;
-        grid-template-rows: 1fr 1fr 180px 180px !important;
+    grid-template-rows: 1fr 1fr 180px 180px !important;
   }
+
   .knowledgesContent .languages {
     -ms-grid-row: 1 !important;
     -ms-grid-column: 1 !important;
     grid-area: 1 !important;
   }
+
   .experience {
     -ms-grid-row: 2 !important;
     -ms-grid-column: 1 !important;
     grid-area: 2 !important;
     margin-top: 0.5rem !important;
   }
+
   .hobbies {
     -ms-grid-row: 5 !important;
     grid-area: 5 !important;
@@ -668,7 +701,7 @@ a:visited {
   width: inherit;
   z-index: -1;
   -webkit-filter: brightness(30%);
-          filter: brightness(30%);
+  filter: brightness(30%);
 }
 
 .contact .header {
@@ -677,8 +710,8 @@ a:visited {
   display: flex;
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 5rem;
   color: #A9A9A9;
   font-size: larger;
@@ -690,11 +723,11 @@ a:visited {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   margin-left: 180px;
   max-width: 580px;
@@ -702,7 +735,8 @@ a:visited {
   color: #A9A9A9;
 }
 
-.contact .contactBox input, .contact .contactBox textarea {
+.contact .contactBox input,
+.contact .contactBox textarea {
   width: 100%;
   border: none;
   border-radius: 25px;
@@ -712,22 +746,26 @@ a:visited {
   padding: 14px;
 }
 
-.contact .contactBox input::-webkit-input-placeholder, .contact .contactBox textarea::-webkit-input-placeholder {
+.contact .contactBox input::-webkit-input-placeholder,
+.contact .contactBox textarea::-webkit-input-placeholder {
   color: #A9A9A9;
   font-size: 18px;
 }
 
-.contact .contactBox input:-ms-input-placeholder, .contact .contactBox textarea:-ms-input-placeholder {
+.contact .contactBox input:-ms-input-placeholder,
+.contact .contactBox textarea:-ms-input-placeholder {
   color: #A9A9A9;
   font-size: 18px;
 }
 
-.contact .contactBox input::-ms-input-placeholder, .contact .contactBox textarea::-ms-input-placeholder {
+.contact .contactBox input::-ms-input-placeholder,
+.contact .contactBox textarea::-ms-input-placeholder {
   color: #A9A9A9;
   font-size: 18px;
 }
 
-.contact .contactBox input::placeholder, .contact .contactBox textarea::placeholder {
+.contact .contactBox input::placeholder,
+.contact .contactBox textarea::placeholder {
   color: #A9A9A9;
   font-size: 18px;
 }
@@ -740,13 +778,14 @@ a:visited {
 @media screen and (max-width: 1605px) {
   .contactBox {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
+
   form {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 500px;
   }
 }
@@ -754,10 +793,11 @@ a:visited {
 @media screen and (max-width: 1024px) {
   .contactBox {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: 2rem !important;
   }
+
   form {
     width: 500px;
   }
@@ -766,11 +806,12 @@ a:visited {
 @media screen and (max-width: 767px) {
   .contactBox {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: 2rem;
     margin-top: -0.5rem;
   }
+
   form {
     margin-top: -4rem;
     width: 300px;
@@ -782,11 +823,11 @@ a:visited {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 95vh;
   max-width: 1200px;
   background: #ddd;
@@ -813,7 +854,7 @@ a:visited {
 
 .container {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -822,11 +863,11 @@ a:visited {
   border-radius: 25px;
   color: black;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   background: rgba(82, 82, 82, 0.1);
   min-height: 75px;
@@ -842,28 +883,29 @@ a:visited {
 @media screen and (max-width: 1024px) {
   .container .CalendarMain * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: "Barlow", cursive;
     width: 850px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     text-align: center;
   }
+
   .container .CalendarMain .react-calendar,
   .container .CalendarMain h2 {
     position: relative;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
     margin-left: 5rem;
   }
@@ -872,30 +914,32 @@ a:visited {
 @media screen and (max-width: 767px) {
   .container .CalendarMain * {
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: "Barlow", cursive;
     width: 600px;
     background-color: "Barlow", cursive;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     text-align: center;
   }
+
   .container .CalendarMain .react-calendar,
   .container .CalendarMain h2 {
     position: relative;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
   }
 }
+
 /*# sourceMappingURL=styles.css.map */

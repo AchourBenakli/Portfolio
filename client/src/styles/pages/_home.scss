@@ -1,15 +1,11 @@
 .home {
-
   .homeContent {
     background: $grey;
     min-height: $minHeight;
     width: 100%;
-    min-height: 500px;
     border-radius: $borderRadius;
     position: relative;
     overflow: hidden;
-
-
 
     &:after {
       content: '';

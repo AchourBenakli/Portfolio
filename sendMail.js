@@ -21,8 +21,8 @@ function contact(req, res) {
   <h3>Informations</h3>
   <ul>
   <li>Mail: ${data.mailFilled}</li>
-  <li>Request DateIn: ${data.dateIn}</li>
-  <li>Request DateOut : ${data.dateOut}</li>
+  <li>Request Date In: ${data.dateIn}</li>
+  <li>Request Date Out : ${data.dateOut}</li>
   </ul>
   `
   };
