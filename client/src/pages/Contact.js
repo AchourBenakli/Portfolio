@@ -34,26 +34,34 @@ class NameForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    let data = {
-      nameFilled: this.state.nameFilled,
-      numberFilled: this.state.numberFilled,
-      mailFilled: this.state.mailFilled,
-      messageFilled: this.state.messageFilled,
-    };
-
-    axios
-      .post('/api/forma', data)
-      .then((res) => {
-        this.setState(
-          {
-            sent: true,
-          },
-          this.resetForm()
-        );
+    if (this.state.mailFilled || this.state.messageFilled || this.state.nameFilled || this.state.numberFilled === '') {
+      this.setState({
+        sent: false
       })
-      .catch(error => {
-        console.log(error.response);
-      });
+      alert('Please fill all the fields')
+    } else {
+      let data = {
+        nameFilled: this.state.nameFilled,
+        numberFilled: this.state.numberFilled,
+        mailFilled: this.state.mailFilled,
+        messageFilled: this.state.messageFilled,
+      };
+
+      axios
+        .post('/api/forma', data)
+        .then((res) => {
+          this.setState(
+            {
+              sent: true,
+            },
+            this.resetForm()
+          );
+        })
+        .catch(error => {
+          console.log(error.response);
+        });
+    }
+
   }
 
   //Reset Data
@@ -79,7 +87,7 @@ class NameForm extends React.Component {
         <NavigationNew />
         <div className="contactContent">
           <div className="header">
-            <h2>Contact njkhjMe</h2>
+            <h2>Contact Me</h2>
           </div>
           <div className="contactBox">
             <form locale="en-GB">
