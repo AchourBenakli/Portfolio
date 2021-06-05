@@ -10,7 +10,7 @@
         "../client/src/styles/pages/_contact.scss",
         "../client/src/styles/pages/_notFound.scss",
         "../client/src/styles/pages/_Avaibalities.scss",
-        "../client/src/styles/pages/_Modal.scss"
+        "../client/src/styles/pages/_modal.scss"
     ],
     "names": [],
     "file": "styles.css"

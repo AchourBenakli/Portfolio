@@ -7,6 +7,21 @@ import Home from './pages/Home';
 import Knowledges from './pages/Knowledges';
 import NotFound from './pages/NotFound';
 
+
+// import { useEffect, useState } from '.react';
+// export const backToFront = () => {
+//   const [initialState, setInitialState] = useState([])
+
+//   useEffect(() => {
+//     fetch('/users/').then(res => {
+//       if (res.ok) {
+//         return res.json()
+//       }
+//     }).then(jsonResponse => setInitialState(jsonResponse))
+//   })
+// }
+
+
 const App = () => {
   return (
     <>
