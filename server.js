@@ -1,13 +1,13 @@
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const { sendEmail, contact } = require('./sendMail');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cors());
+app.use(cors());
 const publicPath = path.join(__dirname, 'client', 'build');
 app.use(express.static(publicPath));
 

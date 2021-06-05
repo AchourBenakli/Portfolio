@@ -79,7 +79,7 @@ class NameForm extends React.Component {
         <NavigationNew />
         <div className="contactContent">
           <div className="header">
-            <h2>Contact Me</h2>
+            <h2>Contact njkhjMe</h2>
           </div>
           <div className="contactBox">
             <form locale="en-GB">
