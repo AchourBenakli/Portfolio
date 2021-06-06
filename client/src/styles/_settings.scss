@@ -65,7 +65,7 @@ a:visited {
 .contact {
   display: flex;
 
-  @media screen and (max-width:850px) {
+  @media screen and (max-width:950px) {
     display: block;
   }
 }
@@ -75,7 +75,7 @@ a:visited {
 .contactContent {
   margin-left: .4rem;
 
-  @media screen and (max-width:850px) {
+  @media screen and (max-width:950px) {
     margin-left: 0;
   }
 }
