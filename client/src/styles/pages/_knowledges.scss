@@ -161,12 +161,10 @@
     }
 
     .hobbies {
-      grid-area: P L H;
       margin: 0 0 0.5rem 0.5rem;
       display: grid;
       height: 100%;
       grid-template-columns: repeat(1, 1fr);
-      // grid-template-rows: 13%;
 
       h3 {
         padding: 0;
@@ -239,14 +237,6 @@
   }
 }
 
-@media screen and (max-width: 1000px) and (min-width : 850px) {
-  .hobby {
-    position: relative;
-    bottom: 10px;
-  }
-}
-
-
 @media screen and (max-width: 700px) {
 
   .knowledges .knowledgesContent,
@@ -282,7 +272,6 @@
         position: relative;
         bottom: 10px;
       }
-
     }
 
     .progressBar {
