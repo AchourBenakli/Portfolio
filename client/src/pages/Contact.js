@@ -34,19 +34,18 @@ class NameForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    if (this.state.mailFilled || this.state.messageFilled || this.state.nameFilled || this.state.numberFilled === '') {
+    let data = {
+      nameFilled: this.state.nameFilled,
+      numberFilled: this.state.numberFilled,
+      mailFilled: this.state.mailFilled,
+      messageFilled: this.state.messageFilled,
+    };
+    if (this.state.nameFilled === '' || this.state.numberFilled === '' || this.state.numberFilled === '' || this.state.messageFilled === '') {
       this.setState({
         sent: false
       })
       alert('Please fill all the fields')
     } else {
-      let data = {
-        nameFilled: this.state.nameFilled,
-        numberFilled: this.state.numberFilled,
-        mailFilled: this.state.mailFilled,
-        messageFilled: this.state.messageFilled,
-      };
-
       axios
         .post('/api/forma', data)
         .then((res) => {
@@ -61,7 +60,6 @@ class NameForm extends React.Component {
           console.log(error.response);
         });
     }
-
   }
 
   //Reset Data
@@ -78,7 +76,7 @@ class NameForm extends React.Component {
       this.setState({
         sent: false,
       });
-    }, 3000);
+    }, 1000);
   };
 
   render() {

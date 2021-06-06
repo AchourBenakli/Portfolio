@@ -10,7 +10,7 @@ const Home = () => {
         <div className="content">
           <h1>Welcome</h1>
           <h2>I'm a Front Desk Agent.</h2>
-          <a href="./CV.pdf" target="_blank">Download CV</a>
+          <a href="./CVAchour.pdf" target="_blank">Download CV</a>
           <Bookme />
         </div>
       </div>

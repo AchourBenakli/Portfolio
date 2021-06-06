@@ -18,8 +18,6 @@
 
 .close {
   position: relative;
-  bottom: 10px;
-  float: right;
   font-size: 0.5rem;
   background: white;
   color: black;
@@ -28,6 +26,8 @@
   padding: 0.5rem 0.8rem;
   transition: 0.3s;
   cursor: pointer;
+  margin-bottom: 20px;
+
 
   &:hover {
     background: black;
@@ -37,8 +37,9 @@
 }
 
 .modalDate {
-  margin-top: 20px;
-  margin-left: -15px;
+  margin-top: 40px;
+  margin-left: -20px;
+
 }
 
 .modalp {
