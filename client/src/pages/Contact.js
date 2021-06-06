@@ -76,7 +76,7 @@ class NameForm extends React.Component {
       this.setState({
         sent: false,
       });
-    }, 1000);
+    }, 5000);
   };
 
   render() {
@@ -131,7 +131,7 @@ class NameForm extends React.Component {
 
               {this.state.sent && (
                 <p className="messageContact">
-                  Thank you for your message, i will contact you as soon as
+                  Thank you for your message! I will contact you as soon as
                   possible
                 </p>
               )}
