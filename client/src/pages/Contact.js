@@ -3,8 +3,17 @@ import React from 'react';
 import NavigationNew from '../components/NavigationNew';
 
 
-const required = `
-<p>PLease fill this element<p/>
+const nameRequired = `
+<p>PLease fill your name<p/>
+`
+const numberRequired = `
+<p>PLease fill a number<p/>
+`
+const mailRequired = `
+<p>PLease fill your e-mail<p/>
+`
+const messageRequired = `
+<p>PLease add a message<p/>
 `
 
 class NameForm extends React.Component {
@@ -19,7 +28,10 @@ class NameForm extends React.Component {
     mailFilled: '',
     messageFilled: '',
     sent: false,
-    errorFill: false
+    errorName: false,
+    errorNumber: false,
+    errorMail: false,
+    errorMessage: false
   };
 
   onChange(event) {
@@ -39,10 +51,10 @@ class NameForm extends React.Component {
       mailFilled: this.state.mailFilled,
       messageFilled: this.state.messageFilled,
     };
-    if (this.state.nameFilled === '') {
+    if ((this.state.nameFilled === '')) {
       this.setState({
         sent: false,
-        errorFill: true
+        errorName: true
       })
     } else {
       axios
@@ -90,46 +102,42 @@ class NameForm extends React.Component {
                 <input
                   type="text"
                   placeholder="Your name"
-                  // value={this.state.nameFilled}
                   onChange={(event) =>
                     this.setState({ nameFilled: event.target.value })
                   }
 
                 />
-                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
+                {this.state.errorName && (<div className={'requiredInput'} dangerouslySetInnerHTML={{ __html: nameRequired }} />)}
               </label>
               <label>
                 <input
                   type="text"
                   placeholder="Your number"
-                  // value={this.state.numberFilled}
                   onChange={this.onChange}
 
                 />
               </label>
-              {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
+              {this.state.errorNumber && (<div className={'requiredInput'} dangerouslySetInnerHTML={{ __html: numberRequired }} />)}
               <label>
                 <input
                   type="text"
                   placeholder="Your email"
-                  // value={this.state.mailFilled}
                   onChange={(event) =>
                     this.setState({ mailFilled: event.target.value })
                   }
 
                 />
-                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
+                {this.state.errorMail && (<div className={'requiredInput'} dangerouslySetInnerHTML={{ __html: mailRequired }} />)}
               </label>
               <label>
                 <textarea
                   className={'textArea'}
-                  // value={this.state.messageFilled}
                   placeholder="Type your message"
                   onChange={(event) =>
                     this.setState({ messageFilled: event.target.value })
                   }
                 />
-                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
+                {this.state.errorMessage && (<div className={'requiredInput'} dangerouslySetInnerHTML={{ __html: messageRequired }} />)}
 
               </label>
 

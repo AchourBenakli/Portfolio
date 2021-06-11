@@ -52,6 +52,13 @@
     }
   }
 
+  .requiredInput {
+    color: red;
+    position: relative;
+    bottom: 10px;
+    margin-left: 10px;
+  }
+
   .inputSubmit {
     cursor: pointer;
     margin-top: 30px;
