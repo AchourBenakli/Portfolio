@@ -2,24 +2,25 @@ import axios from 'axios';
 import React from 'react';
 import NavigationNew from '../components/NavigationNew';
 
+
+const required = `
+<p>PLease fill this element<p/>
+`
+
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
   }
-
-  // ✅ Ajout d'un etat locale
-
   state = {
     nameFilled: '',
     numberFilled: '',
     mailFilled: '',
     messageFilled: '',
     sent: false,
+    errorFill: false
   };
-
-  // ✅ Creation d'une methode react pour detecter une valeur
 
   onChange(event) {
     const re = /^[0-9\b]+$/;
@@ -30,8 +31,6 @@ class NameForm extends React.Component {
     }
   }
 
-  // ✅ Creation d'une methode react pour recuperer une valeur
-
   handleSubmit(event) {
     event.preventDefault();
     let data = {
@@ -40,11 +39,11 @@ class NameForm extends React.Component {
       mailFilled: this.state.mailFilled,
       messageFilled: this.state.messageFilled,
     };
-    if (this.state.nameFilled === '' || this.state.numberFilled === '' || this.state.numberFilled === '' || this.state.messageFilled === '') {
+    if (this.state.nameFilled === '') {
       this.setState({
-        sent: false
+        sent: false,
+        errorFill: true
       })
-      alert('Please fill all the fields')
     } else {
       axios
         .post('/api/forma', data)
@@ -61,8 +60,6 @@ class NameForm extends React.Component {
         });
     }
   }
-
-  //Reset Data
 
   resetForm = () => {
     this.setState({
@@ -93,40 +90,47 @@ class NameForm extends React.Component {
                 <input
                   type="text"
                   placeholder="Your name"
-                  value={this.state.nameFilled}
+                  // value={this.state.nameFilled}
                   onChange={(event) =>
                     this.setState({ nameFilled: event.target.value })
                   }
+
                 />
+                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
               </label>
               <label>
                 <input
                   type="text"
                   placeholder="Your number"
-                  value={this.state.numberFilled}
+                  // value={this.state.numberFilled}
                   onChange={this.onChange}
+
                 />
               </label>
-
+              {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
               <label>
                 <input
                   type="text"
                   placeholder="Your email"
-                  value={this.state.mailFilled}
+                  // value={this.state.mailFilled}
                   onChange={(event) =>
                     this.setState({ mailFilled: event.target.value })
                   }
+
                 />
+                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
               </label>
               <label>
                 <textarea
                   className={'textArea'}
-                  value={this.state.messageFilled}
+                  // value={this.state.messageFilled}
                   placeholder="Type your message"
                   onChange={(event) =>
                     this.setState({ messageFilled: event.target.value })
                   }
                 />
+                {this.state.errorFill && (<div dangerouslySetInnerHTML={{ __html: required }} />)}
+
               </label>
 
               {this.state.sent && (
