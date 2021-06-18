@@ -82,7 +82,7 @@ class NameForm extends React.Component {
 
 
                   {/* <label htmlFor="message">Message</label> */}
-                  <Field name="message" type="message" placeholder="Message" id={"textarea"} className={'input' + (errors.message && touched.message ? ' is-invalid' : '')} />
+                  <Field name="message" type="message" placeholder="Message" multiline rows={40} className={'input' + (errors.message && touched.message ? ' is-invalid' : '')} />
                   <ErrorMessage name="message" component="div" className="invalid-feedback" />
 
 

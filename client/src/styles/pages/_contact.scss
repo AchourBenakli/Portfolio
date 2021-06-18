@@ -28,12 +28,11 @@
   }
 
   .contactBox {
-    display: flex;
     width: 100%;
     color: $black;
     margin-top: -1rem;
     justify-content: center;
-    margin-left: 1rem;
+    margin-left: 3rem;
   }
 
   .input,
@@ -82,6 +81,9 @@
 
   .invalid-feedback {
     color: white;
+    position: relative;
+    bottom: 10px;
+
   }
 
 
@@ -112,7 +114,7 @@ input {
 }
 
 #textarea {
-  height: 8.5rem;
+  padding-bottom: 80px;
 }
 
 h2 {
