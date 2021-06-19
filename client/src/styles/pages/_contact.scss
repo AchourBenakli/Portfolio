@@ -71,7 +71,7 @@
 
   .inputSubmit {
     cursor: pointer;
-    margin-top: 30px;
+
 
     &:hover {
       color: $white;
@@ -83,6 +83,13 @@
     color: white;
     position: relative;
     bottom: 10px;
+
+  }
+
+  .invalid-feedbackMessage {
+    color: white;
+    position: relative;
+    bottom: 5px;
 
   }
 
@@ -116,7 +123,7 @@ input {
 textArea {
   margin-bottom: 20px;
   font-family: $font-1;
-  height: 150px;
+  height: 120px;
 }
 
 h2 {

@@ -24,7 +24,7 @@ class NameForm extends React.Component {
             .email('Email is invalid')
             .required('Email is required'),
           message: Yup.string()
-            .min(30, 'Please add at least 30 characters')
+            .min(20, 'Please add at least 20 characters')
             .required('Message is required'),
         })}
 
@@ -37,19 +37,12 @@ class NameForm extends React.Component {
           };
           axios
             .post('/api/forma', data)
-            .then((res) => {
-              this.setState(
-                {
-                  sent: true,
-                },
-                this.resetForm()
-              );
-            })
             .catch(error => {
               console.log(error.response);
             });
         }
         }
+
 
         render={({ errors, status, touched }) => (
           <div className="contact">
@@ -82,8 +75,8 @@ class NameForm extends React.Component {
 
 
                   {/* <label htmlFor="message">Message</label> */}
-                  <textArea name="message" type="message" placeholder="Message" className={'input' + (errors.message && touched.message ? ' is-invalid' : '')} />
-                  <ErrorMessage name="message" component="div" className="invalid-feedback" />
+                  <Field as='textarea' name="message" type="message" placeholder="Message" className={'input' + (errors.message && touched.message ? ' is-invalid' : '')} />
+                  <ErrorMessage name="message" component="div" className="invalid-feedbackMessage" />
 
 
                   <button type="submit" className="inputSubmit" >Submit</button>
