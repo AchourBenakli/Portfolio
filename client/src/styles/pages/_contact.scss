@@ -113,8 +113,10 @@ input {
   font-family: $font-1;
 }
 
-#textarea {
-  padding-bottom: 80px;
+textArea {
+  margin-bottom: 20px;
+  font-family: $font-1;
+  height: 150px;
 }
 
 h2 {
@@ -122,18 +124,4 @@ h2 {
   justify-content: center;
   text-align: center;
   align-items: center;
-}
-
-.messageContact {
-  background-color: white;
-  position: absolute;
-  top: 0%;
-  left: 30%;
-  width: 60%;
-  height: 20%;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin-top: 200px;
-  color: black;
 }
