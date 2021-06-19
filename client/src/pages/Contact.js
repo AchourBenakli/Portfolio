@@ -3,8 +3,17 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
 import NavigationNew from '../components/NavigationNew';
+import PopupContact from './Popup';
+
 
 class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  state = {
+    showPopup: false
+  };
+
   render() {
     return (
       <Formik
@@ -38,8 +47,11 @@ class NameForm extends React.Component {
           axios
             .post('/api/forma', data)
             .then(() => {
-              alert('Thank you for your message')
-            })
+              this.setState(
+                { showPopup: true }
+              )
+            }
+            )
             .catch(error => {
               console.log(error.response);
             });
@@ -52,7 +64,6 @@ class NameForm extends React.Component {
             }
           })
         }
-
         }
 
 
@@ -90,6 +101,7 @@ class NameForm extends React.Component {
                   <Field as='textarea' name="message" type="message" placeholder="Message" className={'input' + (errors.message && touched.message ? ' is-invalid' : '')} />
                   <ErrorMessage name="message" component="div" className="invalid-feedbackMessage" />
 
+                  {this.state.showPopup && <PopupContact />}
 
                   <button type="submit" className="inputSubmit" >Submit</button>
 

@@ -30,6 +30,7 @@
     "express": "^4.17.1",
     "formik": "^2.2.9",
     "nodemailer": "^6.5.0",
+    "reactjs-popup": "^2.0.4",
     "yup": "^0.32.9"
   },
   "devDependencies": {
