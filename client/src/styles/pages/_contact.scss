@@ -28,22 +28,29 @@
   }
 
   .contactBox {
+    display: flex;
+    justify-content: center;
     width: 100%;
     color: $black;
     margin-top: -1rem;
-    justify-content: center;
-    margin-left: 3rem;
+    margin: 0rem;
+
+
+    form {
+      box-sizing: border-box;
+    }
   }
+
 
   .input,
   button {
-    width: 90%;
+    width: 100%;
     border: none;
     border-radius: $borderRadius;
     outline: none;
     border-bottom: 1px solid $black;
     color: $grey;
-    padding: 14px;
+    padding: 14px 12px;
 
     &::placeholder {
       color: $black;
@@ -71,7 +78,6 @@
 
   .inputSubmit {
     cursor: pointer;
-
 
     &:hover {
       color: $white;
@@ -101,34 +107,21 @@
     }
   }
 
-  @media screen and (max-width: 850px) {
-    .contactBox {
-      margin-left: 1rem;
-    }
-
+  input {
+    margin-bottom: 20px;
+    font-family: $font-1;
   }
 
-  @media screen and (max-width: 400px) {
-    .contactBox {
-      margin-left: 0.5rem;
-    }
+  textArea {
+    margin-bottom: 20px;
+    font-family: $font-1;
+    height: 120px;
   }
-}
 
-input {
-  margin-bottom: 20px;
-  font-family: $font-1;
-}
-
-textArea {
-  margin-bottom: 20px;
-  font-family: $font-1;
-  height: 120px;
-}
-
-h2 {
-  position: relative;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  h2 {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 }

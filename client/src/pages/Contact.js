@@ -37,6 +37,9 @@ class NameForm extends React.Component {
           };
           axios
             .post('/api/forma', data)
+            .then(() => {
+              alert('Thank you for your message')
+            })
             .catch(error => {
               console.log(error.response);
             });
