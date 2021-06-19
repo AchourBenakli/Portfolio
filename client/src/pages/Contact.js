@@ -28,7 +28,7 @@ class NameForm extends React.Component {
             .required('Message is required'),
         })}
 
-        onSubmit={values => {
+        onSubmit={(values, actions) => {
           let data = {
             nameFilled: values.name,
             numberFilled: values.number,
@@ -43,7 +43,16 @@ class NameForm extends React.Component {
             .catch(error => {
               console.log(error.response);
             });
+          actions.resetForm({
+            values: {
+              name: '',
+              number: '',
+              email: '',
+              message: '',
+            }
+          })
         }
+
         }
 
 
