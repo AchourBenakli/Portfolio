@@ -1,7 +1,6 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 
-
 const PopupContact = () =>
 (
   <Popup open={true} position="top left">
