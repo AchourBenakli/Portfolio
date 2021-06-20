@@ -49,8 +49,11 @@
 }
 
 .popup {
+  margin-left: 280px;
   padding: 50px 100px;
-  background-color: aliceblue;
+  background-color: $grey;
+  color: white;
+  border-radius: $borderRadius;
 }
 
 @media screen and (max-width: 500px) {
@@ -59,5 +62,12 @@
     width: 70%;
     left: 15%;
     margin: 0px;
+  }
+
+  .popup {
+    padding: 37px 75px;
+    background-color: $grey;
+    color: white;
+    border-radius: $borderRadius;
   }
 }

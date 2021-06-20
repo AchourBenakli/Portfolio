@@ -28,13 +28,12 @@
   }
 
   .contactBox {
-    display: flex;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     color: $black;
-    margin-top: -1rem;
-    margin: 0rem;
-
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
 
     form {
       box-sizing: border-box;
@@ -78,6 +77,8 @@
 
   .inputSubmit {
     cursor: pointer;
+    font-family: $font-1;
+    font-size: 1rem;
 
     &:hover {
       color: $white;

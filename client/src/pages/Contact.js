@@ -7,9 +7,6 @@ import PopupContact from './Popup';
 
 
 class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     showPopup: false
   };
@@ -47,22 +44,24 @@ class NameForm extends React.Component {
           axios
             .post('/api/forma', data)
             .then(() => {
-              this.setState(
-                { showPopup: true }
+              this.setState({ showPopup: true },
+                actions.resetForm({
+                  values: {
+                    name: '',
+                    number: '',
+                    email: '',
+                    message: '',
+                  }
+                }),
+                setTimeout(() => {
+                  this.setState({ showPopup: false })
+                }, 30000)
               )
             }
             )
             .catch(error => {
               console.log(error.response);
             });
-          actions.resetForm({
-            values: {
-              name: '',
-              number: '',
-              email: '',
-              message: '',
-            }
-          })
         }
         }
 
