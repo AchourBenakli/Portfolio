@@ -55,7 +55,7 @@ class NameForm extends React.Component {
                 }),
                 setTimeout(() => {
                   this.setState({ showPopup: false })
-                }, 30000)
+                }, 3000)
               )
             }
             )
