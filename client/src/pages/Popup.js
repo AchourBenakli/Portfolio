@@ -5,10 +5,10 @@ const PopupContact = () =>
 (
   <Popup open={true} position="top left">
     <div className={'popup'}>
-      Thank you for your message
+      Thank you for your request!
       <br />
       <br />
-      I will contact you soon
+      I will contact you very soon
     </div>
   </Popup>
 );

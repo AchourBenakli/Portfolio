@@ -1,6 +1,7 @@
 import axios from 'axios';
 import moment from 'moment';
 import React from 'react';
+import PopupContact from './Popup';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Modal extends React.Component {
   state = {
     mailFilled: '',
     sent: false,
+    showPopup: false
   };
 
   handleClick = () => {
@@ -33,9 +35,14 @@ class Modal extends React.Component {
           this.setState(
             {
               sent: true,
-            },
-            alert('Thank you for your request')
-          );
+              showPopup: true
+            }
+          )
+          setTimeout(() => {
+            this.setState({
+              showPopup: false
+            })
+          }, 3000);
         } else {
           alert('Pleaser enter a valid mail')
         }
@@ -77,6 +84,7 @@ class Modal extends React.Component {
               value="submit"
             />
           </label>
+          {this.state.showPopup && <PopupContact />}
         </div>
       </div>
     );
