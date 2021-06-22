@@ -85,7 +85,7 @@ class Avaibalities extends React.Component {
               {this.state.showDate
                 &&
                 <p>
-                  From : {this.state.date[0].toLocaleDateString()} to :{' '}
+                  From : {' '} {this.state.date[0].toLocaleDateString()} to :{' '}
                   {this.state.date[1].toLocaleDateString()}
                 </p>
               }

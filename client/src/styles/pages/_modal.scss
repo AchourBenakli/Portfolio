@@ -5,15 +5,40 @@
 }
 
 .modal_content {
-  background-color: white;
+  background-color: $grey;
   position: absolute;
-  top: 0%;
+  top: 15%;
   left: 30%;
   width: 40%;
   // height: 40%;
   padding: 20px;
   border-radius: 5px;
   border: 1px solid black;
+}
+
+.modalLabel {
+  border-radius: $borderRadius;
+  color: $grey;
+  padding: 5px 0px;
+  width: 100%;
+
+
+}
+
+.inputSubmit {
+  margin: 0 auto;
+  display: flex;
+  border-radius: $borderRadius;
+  color: $grey;
+  padding: 10px 30px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: black;
+    color: white;
+    transition: 0.3s ease;
+  }
 }
 
 .close {

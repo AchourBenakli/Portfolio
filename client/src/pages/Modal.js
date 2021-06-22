@@ -57,7 +57,7 @@ class Modal extends React.Component {
     return (
       <div className="modal">
         <div className="modal_content">
-          <span className="close" onClick={this.handleClick}>&times;</span>
+          <span className="close" onClick={this.handleClick} style={{ float: 'right' }}>&times;</span>
           <div className={'modalDate'} >
             {this.props.dateModal && <p className={'modalp'}>From :
               {this.props.dateModal[0].toLocaleDateString()} to : {this.props.dateModal[1].toLocaleDateString()}
@@ -65,8 +65,8 @@ class Modal extends React.Component {
             }
           </div>
           <div className='mailFilled'>
-            <label className={'modalLabel'}>
-              <input
+            <label >
+              <input className={'modalLabel'}
                 type="text"
                 placeholder="Please write your email"
                 value={this.state.mailFilled}
@@ -78,6 +78,7 @@ class Modal extends React.Component {
           </div>
           <label>
             <input
+              style={{ float: 'center' }}
               type="submit"
               className={"inputSubmit"}
               onClick={this.handleSubmit}
