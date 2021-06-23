@@ -82,6 +82,16 @@
   border-radius: $borderRadius;
 }
 
+@media screen and (max-width: 855px) {
+
+  .popup {
+    padding: 25px 50px;
+    background-color: $grey;
+    color: white;
+    border-radius: $borderRadius;
+  }
+}
+
 @media screen and (max-width: 500px) {
 
   .modal_content {

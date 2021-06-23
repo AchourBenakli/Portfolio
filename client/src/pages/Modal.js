@@ -11,9 +11,9 @@ class Modal extends React.Component {
   state = {
     mailFilled: '',
     sent: false,
-    showPopup: false
+    showPopup: false,
+    closeModal: !this.props.toggle
   };
-
   handleClick = () => {
     this.props.toggle();
   };
@@ -40,9 +40,12 @@ class Modal extends React.Component {
           )
           setTimeout(() => {
             this.setState({
-              showPopup: false
+              showPopup: false,
+              closeModal: this.props.toggle()
             })
           }, 3000);
+
+
         } else {
           alert('Pleaser enter a valid mail')
         }
@@ -82,7 +85,7 @@ class Modal extends React.Component {
               type="submit"
               className={"inputSubmit"}
               onClick={this.handleSubmit}
-              value="submit"
+              value="Submit"
             />
           </label>
           {this.state.showPopup && <PopupContact />}

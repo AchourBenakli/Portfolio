@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom';
 import NavigationNew from '../components/NavigationNew';
 import Modal from '../pages/Modal';
 
-
-
 class Avaibalities extends React.Component {
   constructor(props) {
     super(props)
@@ -46,8 +44,6 @@ class Avaibalities extends React.Component {
       showModal: !prevState.showModal
     }));
   };
-
-
 
   render() {
     return (
