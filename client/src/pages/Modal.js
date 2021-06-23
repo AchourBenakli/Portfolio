@@ -12,7 +12,8 @@ class Modal extends React.Component {
     mailFilled: '',
     sent: false,
     showPopup: false,
-    closeModal: !this.props.toggle
+    closeModal: !this.props.toggle,
+    resetDate: !this.props.reset
   };
   handleClick = () => {
     this.props.toggle();
@@ -41,7 +42,8 @@ class Modal extends React.Component {
           setTimeout(() => {
             this.setState({
               showPopup: false,
-              closeModal: this.props.toggle()
+              closeModal: this.props.toggle(),
+              resetDate: this.props.reset()
             })
           }, 3000);
 
