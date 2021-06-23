@@ -20,8 +20,6 @@
   color: $grey;
   padding: 5px 0px;
   width: 100%;
-
-
 }
 
 .inputSubmit {
@@ -86,8 +84,14 @@
 }
 
 @media screen and (max-width: 855px) {
+  .modal_content {
+    width: 70%;
+    left: 15%;
+    margin: 0px;
+  }
+
   .popup {
-    padding: 25px 50px;
+    padding: 50px 50px;
     background-color: $grey;
     color: white;
     border-radius: $borderRadius;
@@ -100,5 +104,13 @@
     width: 70%;
     left: 15%;
     margin: 0px;
+  }
+
+  .popup {
+    display: flex;
+    width: 75%;
+    background-color: $grey;
+    color: white;
+    border-radius: $borderRadius;
   }
 }
