@@ -64,7 +64,7 @@ class Modal extends React.Component {
         <div className="modal_content">
           <span className="close" onClick={this.handleClick} style={{ float: 'right' }}>&times;</span>
           <div className={'modalDate'} >
-            {this.props.dateModal && <p className={'modalp'}>From :
+            {this.props.dateModal && <p className={'modalp'}>From : {''}
               {this.props.dateModal[0].toLocaleDateString()} to : {this.props.dateModal[1].toLocaleDateString()}
             </p>
             }

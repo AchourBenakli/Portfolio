@@ -14,7 +14,7 @@
     .programsLanguages,
     .experience,
     .hobbies {
-      background: $black;
+      background: $grey;
       border-radius: $borderRadius;
       padding: 1.2rem;
       font-size: 0.95rem;
@@ -25,9 +25,21 @@
       font-size: 1.2rem;
       margin-bottom: 1rem;
       font-family: $font-2;
-      color: $grey;
+      color: $white;
       text-transform: uppercase;
       margin-top: 1rem;
+    }
+
+    h4,
+    span {
+      color: $white;
+    }
+
+
+    h5,
+    p,
+    li {
+      color: $black;
     }
 
     .programsLanguages {
@@ -186,6 +198,11 @@
 
       .hobby {
         padding: 0;
+      }
+
+      i,
+      span {
+        color: $white;
       }
     }
 

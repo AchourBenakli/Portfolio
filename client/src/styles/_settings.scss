@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Josefin+Sans:wght@100&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&family=Ubuntu:ital,wght@1,300&display=swap');
 
-$font-1: 'Poppins',
+$font-1: 'Rubik',
 cursive;
-$font-2: 'Barlow',
+$font-2: 'Rubik',
 cursive;
 $font-3: 'Josefin Sans',
 cursive;
 
-$grey: rgb(26, 23, 23);
+$grey: linear-gradient(#000000, #4b4c53);
 $white: #ddd;
 $blue: #2a1d52;
 $black: #A9A9A9;
