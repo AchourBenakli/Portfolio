@@ -1,17 +1,20 @@
 import React from 'react';
-import Popup from 'reactjs-popup';
 
-const PopupContact = () =>
-(
-  <Popup open={true} position="top left">
-    <div className={'popup'}>
-      Thank you for your request!
-      <br />
-      <br />
-      I will contact you very soon
-    </div>
-  </Popup>
-);
+class PopupContact extends React.Component {
+  render() {
+    return (
+
+      <div className={'popup'}>
+        Thank you for your request!
+        <br />
+        <br />
+        I will contact you very soon
+      </div>
+
+    )
+  }
+}
+
 
 
 export default PopupContact;

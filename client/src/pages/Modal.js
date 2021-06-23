@@ -1,7 +1,7 @@
 import axios from 'axios';
 import moment from 'moment';
 import React from 'react';
-import PopupContact from './Popup';
+import PopupContact from '../pages/Popup';
 
 class Modal extends React.Component {
   constructor(props) {
@@ -90,9 +90,11 @@ class Modal extends React.Component {
               value="Submit"
             />
           </label>
-          {this.state.showPopup && <PopupContact />}
+
         </div>
+        {this.state.showPopup && <PopupContact />}
       </div>
+
     );
   }
 }

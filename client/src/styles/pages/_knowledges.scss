@@ -17,7 +17,7 @@
       background: $grey;
       border-radius: $borderRadius;
       padding: 1.2rem;
-      font-size: 0.95rem;
+      height: 100%;
 
     }
 
@@ -225,6 +225,13 @@
     .exp-2,
     .exp-3 {
       margin-top: 1rem;
+      position: relative;
+      top: 20px;
+    }
+
+    .exp-1 {
+      position: relative;
+      top: 10px;
     }
 
     h3 {
