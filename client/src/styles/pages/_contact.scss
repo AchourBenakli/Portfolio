@@ -33,7 +33,7 @@
     color: $black;
     margin: 0 auto;
     position: relative;
-    top: 20px;
+    bottom: 20px;
 
     form {
       box-sizing: border-box;
@@ -100,13 +100,6 @@
 
   }
 
-
-  @media screen and (max-width: 1500px) and (min-width:1280px) {
-    .contactBox {
-      position: relative;
-      top: 20px;
-    }
-  }
 
   input {
     margin-bottom: 20px;
